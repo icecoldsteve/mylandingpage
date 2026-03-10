@@ -11,6 +11,7 @@
     .hero-bg { background: linear-gradient(135deg, #18181b 0%, #27272a 100%); }
     .tool-card { transition: all 0.3s ease; }
     .tool-card:hover { transform: translateY(-4px); background-color: #27272a; }
+    .discount-box { background: linear-gradient(90deg, #22c55e, #16a34a); }
   </style>
 </head>
 <body class="bg-zinc-950 text-white">
@@ -24,22 +25,68 @@
         </div>
       </div>
       <h1 class="text-7xl font-bold tracking-tighter mb-6">Social Media<br>Swiss Army Knife</h1>
-      <p class="text-3xl text-zinc-400 mb-10 max-w-2xl mx-auto">30 powerful AI tools for content creators — all in one desktop app.</p>
       
+      <p class="text-3xl text-zinc-400 mb-10 max-w-2xl mx-auto">
+        30 powerful AI tools for content creators<br>
+        — all in one desktop app.
+      </p>
+
+      <!-- Buy Button -->
       <div class="flex gap-6 justify-center items-center flex-wrap">
-        <a href="SocialMediaSwissArmyKnife.exe" 
+        <a href="https://icecoldsteve.gumroad.com/l/fnfgvd" 
+           target="_blank"
            class="bg-white text-black px-12 py-5 rounded-2xl font-semibold text-xl flex items-center gap-4 hover:bg-zinc-100 transition-all shadow-xl">
-          <i class="fa-solid fa-download"></i>
-          Download for Windows (Free)
+          <i class="fa-solid fa-cart-shopping"></i>
+          BUY ON GUMROAD
         </a>
-        <div class="text-sm text-zinc-500">
-          v4.3.0 • March 2026<br>
-          <span class="text-emerald-400">No installation • Works offline • FFmpeg included</span>
+      </div>
+
+      <!-- NEW DISCOUNT BANNER -->
+      <div class="mt-10 max-w-2xl mx-auto">
+        <div class="discount-box text-black rounded-3xl p-8 shadow-2xl">
+          <div class="flex flex-col md:flex-row items-center justify-center gap-6 text-center md:text-left">
+            <div>
+              <p class="text-sm font-semibold tracking-widest">LAUNCH DISCOUNT – LIMITED TIME</p>
+              <p class="text-4xl font-bold mt-2">Use code <span class="bg-white px-4 py-1 rounded-xl font-mono text-xl">WEB1000</span></p>
+              <p class="text-2xl mt-3">
+                $50 OFF • Regular $89 → <span class="font-bold text-green-900">$39</span>
+              </p>
+            </div>
+            
+            <div class="hidden md:block w-px h-20 bg-black/20"></div>
+            
+            <div class="text-left">
+              <div class="flex items-center gap-2 text-lg font-semibold">
+                <i class="fa-solid fa-check"></i>
+                One-time payment
+              </div>
+              <div class="flex items-center gap-2 text-lg font-semibold">
+                <i class="fa-solid fa-check"></i>
+                Lifetime access + free updates forever
+              </div>
+              <div class="flex items-center gap-2 text-lg font-semibold text-red-800">
+                <i class="fa-solid fa-xmark"></i>
+                NO monthly subscription
+              </div>
+            </div>
+          </div>
+
+          <!-- Copy button -->
+          <button onclick="copyDiscountCode()" 
+                  class="mt-6 bg-black text-white hover:bg-zinc-800 transition px-8 py-3 rounded-2xl font-semibold flex items-center gap-3 mx-auto">
+            <i class="fa-solid fa-copy"></i>
+            <span id="copyText">Copy Discount Code WEB1000</span>
+          </button>
         </div>
+        
+        <p class="text-xs text-zinc-500 mt-4">
+          One-time purchase • Lifetime license • Free updates for life
+        </p>
       </div>
     </div>
   </header>
 
+  <!-- Rest of the page (Features, Tool Grid, Footer) stays exactly the same -->
   <!-- Features -->
   <section class="py-20 bg-zinc-900">
     <div class="max-w-6xl mx-auto px-6">
@@ -81,7 +128,6 @@
         <div class="tool-card bg-zinc-900 p-6 rounded-2xl">Caption Adapter</div>
         <div class="tool-card bg-zinc-900 p-6 rounded-2xl">Sentiment Analyzer</div>
         <div class="tool-card bg-zinc-900 p-6 rounded-2xl">30-Day Content Calendar</div>
-        <!-- Add the rest if you want – this is the latest version we made -->
       </div>
     </div>
   </section>
@@ -91,6 +137,18 @@
     <p>© 2026 IcecoldAI • Social Media Swiss Army Knife v4.3.0</p>
     <p class="mt-2">Built for creators who want to move faster.</p>
   </footer>
+
+  <script>
+    function copyDiscountCode() {
+      navigator.clipboard.writeText("WEB1000");
+      const btnText = document.getElementById("copyText");
+      const originalText = btnText.innerHTML;
+      btnText.innerHTML = "✅ Copied!";
+      setTimeout(() => {
+        btnText.innerHTML = originalText;
+      }, 2000);
+    }
+  </script>
 
 </body>
 </html>
