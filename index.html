@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -7,17 +6,14 @@
   <title>Social Media Swiss Army Knife • v4.3.0</title>
 
   <!-- SEO & Open Graph -->
-
   <meta name="description" content="30 powerful AI tools for content creators — all in one desktop app. Video editing, AI writing, direct publishing & more. One-time payment, no subscription.">
   <meta name="keywords" content="social media tools, content creator app, AI content tools, video editor, social media scheduler, desktop app">
   <meta name="author" content="IcecoldAI">
 
   <!-- Canonical -->
-
   <link rel="canonical" href="https://swissarmy.app">
 
   <!-- JSON-LD: SoftwareApplication -->
-
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -36,7 +32,7 @@
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "5",
-      "reviewCount": "10000"
+      "reviewCount": "899"
     },
     "author": {
       "@type": "Person",
@@ -53,7 +49,6 @@
   </script>
 
   <!-- JSON-LD: FAQPage -->
-
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -141,1281 +136,1277 @@
       --green: #22c55e;
     }
 
-```
-/* ── LIGHT MODE ── */
-body.light {
-  --bg: #f5f5f7;
-  --surface: #ffffff;
-  --surface2: #e8e8ed;
-  --border: rgba(0,0,0,0.08);
-  --text: #1a1a1e;
-  --muted: #6e6e80;
-  --accent: #7c3aed;
-  --accent2: #6d28d9;
-  --green: #16a34a;
-}
-body.light .hero-bg,
-body.light .hero { background: linear-gradient(135deg, #f0ecff 0%, #e8e4ff 100%); }
-body.light body::before { opacity: 0.015; }
-body.light nav { background: rgba(245,245,247,0.92); }
-body.light .tool-card:hover { background-color: #f0ecff; }
-body.light .comp-theirs { background: #fafafa; }
-body.light .comp-ours { background: linear-gradient(160deg, #ede9fe, #f5f3ff); }
-body.light .testimonial { background: #ffffff; }
-body.light .faq-section { background: #f0f0f5; }
-body.light .tools-section { background: #f0f0f5; }
-body.light .mockup-wrap { background: #fff; }
-body.light .mockup-titlebar { background: #f5f5f7; }
-body.light .mockup-body { background: repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(0,0,0,0.015) 20px, rgba(0,0,0,0.015) 40px); }
-body.light .as-seen-on { background: #ffffff; }
-body.light .hero::after { background: radial-gradient(circle, rgba(124,58,237,0.08) 0%, transparent 65%); }
-body.light .final-cta::before { background: radial-gradient(circle, rgba(124,58,237,0.07) 0%, transparent 70%); }
-body.light .savings-callout { background: linear-gradient(135deg, rgba(124,58,237,0.06), rgba(124,58,237,0.03)); }
-body.light .platform-badge { background: rgba(0,0,0,0.05); }
-body.light .hero-badge { background: rgba(124,58,237,0.08); }
+    /* ── LIGHT MODE ── */
+    body.light {
+      --bg: #f5f5f7;
+      --surface: #ffffff;
+      --surface2: #e8e8ed;
+      --border: rgba(0,0,0,0.08);
+      --text: #1a1a1e;
+      --muted: #6e6e80;
+      --accent: #7c3aed;
+      --accent2: #6d28d9;
+      --green: #16a34a;
+    }
+    body.light .hero-bg,
+    body.light .hero { background: linear-gradient(135deg, #f0ecff 0%, #e8e4ff 100%); }
+    body.light::before { opacity: 0.015; }
+    body.light nav { background: rgba(245,245,247,0.92); }
+    body.light .tool-card:hover { background-color: #f0ecff; }
+    body.light .comp-theirs { background: #fafafa; }
+    body.light .comp-ours { background: linear-gradient(160deg, #ede9fe, #f5f3ff); }
+    body.light .testimonial { background: #ffffff; }
+    body.light .faq-section { background: #f0f0f5; }
+    body.light .tools-section { background: #f0f0f5; }
+    body.light .mockup-wrap { background: #fff; }
+    body.light .mockup-titlebar { background: #f5f5f7; }
+    body.light .mockup-body { background: repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(0,0,0,0.015) 20px, rgba(0,0,0,0.015) 40px); }
+    body.light .as-seen-on { background: #ffffff; }
+    body.light .hero::after { background: radial-gradient(circle, rgba(124,58,237,0.08) 0%, transparent 65%); }
+    body.light .final-cta::before { background: radial-gradient(circle, rgba(124,58,237,0.07) 0%, transparent 70%); }
+    body.light .savings-callout { background: linear-gradient(135deg, rgba(124,58,237,0.06), rgba(124,58,237,0.03)); }
+    body.light .platform-badge { background: rgba(0,0,0,0.05); }
+    body.light .hero-badge { background: rgba(124,58,237,0.08); }
 
-/* smooth theme transition */
-body, nav, .tool-card, .testimonial, .feature-card,
-.faq-section, .tools-section, .mockup-wrap, .as-seen-on,
-.comp-theirs, .comp-ours, .savings-callout {
-  transition: background 0.3s ease, color 0.2s ease, border-color 0.2s ease;
-}
+    /* smooth theme transition */
+    body, nav, .tool-card, .testimonial, .feature-card,
+    .faq-section, .tools-section, .mockup-wrap, .as-seen-on,
+    .comp-theirs, .comp-ours, .savings-callout {
+      transition: background 0.3s ease, color 0.2s ease, border-color 0.2s ease;
+    }
 
-/* ── THEME TOGGLE ── */
-.theme-toggle {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 1px solid var(--border);
-  background: var(--surface2);
-  color: var(--muted);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1rem;
-  transition: background 0.2s, border-color 0.2s, transform 0.2s;
-  flex-shrink: 0;
-}
-.theme-toggle:hover {
-  background: var(--surface);
-  border-color: var(--accent);
-  color: var(--text);
-  transform: rotate(15deg);
-}
+    /* ── THEME TOGGLE ── */
+    .theme-toggle {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: var(--surface2);
+      color: var(--muted);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      transition: background 0.2s, border-color 0.2s, transform 0.2s;
+      flex-shrink: 0;
+    }
+    .theme-toggle:hover {
+      background: var(--surface);
+      border-color: var(--accent);
+      color: var(--text);
+      transform: rotate(15deg);
+    }
 
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; }
 
-body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: 'DM Sans', sans-serif;
-  overflow-x: hidden;
-}
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      overflow-x: hidden;
+    }
 
-/* ── NOISE OVERLAY ── */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
-  opacity: 0.025;
-  pointer-events: none;
-  z-index: 9999;
-}
+    /* ── NOISE OVERLAY ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+      opacity: 0.025;
+      pointer-events: none;
+      z-index: 9999;
+    }
 
-h1, h2, h3, h4 { font-family: 'Syne', sans-serif; }
+    h1, h2, h3, h4 { font-family: 'Syne', sans-serif; }
 
-/* ── NAV ── */
-nav {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1.25rem 2.5rem;
-  background: rgba(13,13,15,0.85);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border);
-}
-.nav-logo {
-  font-family: 'Syne', sans-serif;
-  font-weight: 800;
-  font-size: 1.1rem;
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-}
-.nav-logo span { color: var(--accent2); }
-.nav-links { display: flex; gap: 2rem; font-size: 0.9rem; color: var(--muted); }
-.nav-links a { color: var(--muted); text-decoration: none; transition: color 0.2s; }
-.nav-links a:hover { color: var(--text); }
-.nav-cta {
-  background: var(--accent);
-  color: white;
-  padding: 0.55rem 1.4rem;
-  border-radius: 999px;
-  font-size: 0.875rem;
-  font-weight: 500;
-  text-decoration: none;
-  transition: opacity 0.2s;
-}
-.nav-cta:hover { opacity: 0.85; }
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 2.5rem;
+      background: rgba(13,13,15,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .nav-logo span { color: var(--accent2); }
+    .nav-links { display: flex; gap: 2rem; font-size: 0.9rem; color: var(--muted); }
+    .nav-links a { color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta {
+      background: var(--accent);
+      color: white;
+      padding: 0.55rem 1.4rem;
+      border-radius: 999px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .nav-cta:hover { opacity: 0.85; }
 
-/* ── HERO ── */
-.hero {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 8rem 1.5rem 5rem;
-  position: relative;
-  overflow: hidden;
-}
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 8rem 1.5rem 5rem;
+      position: relative;
+      overflow: hidden;
+    }
 
-/* radial glow */
-.hero::after {
-  content: '';
-  position: absolute;
-  top: -20%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 900px;
-  height: 900px;
-  background: radial-gradient(circle, rgba(124,58,237,0.18) 0%, transparent 65%);
-  pointer-events: none;
-}
+    /* radial glow */
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: -20%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 900px;
+      height: 900px;
+      background: radial-gradient(circle, rgba(124,58,237,0.18) 0%, transparent 65%);
+      pointer-events: none;
+    }
 
-.hero-inner { position: relative; z-index: 1; max-width: 860px; }
+    .hero-inner { position: relative; z-index: 1; max-width: 860px; }
 
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: rgba(124,58,237,0.15);
-  border: 1px solid rgba(124,58,237,0.35);
-  color: var(--accent2);
-  font-size: 0.78rem;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 0.45rem 1.1rem;
-  border-radius: 999px;
-  margin-bottom: 2.5rem;
-  animation: fadeUp 0.6s ease both;
-}
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(124,58,237,0.15);
+      border: 1px solid rgba(124,58,237,0.35);
+      color: var(--accent2);
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.45rem 1.1rem;
+      border-radius: 999px;
+      margin-bottom: 2.5rem;
+      animation: fadeUp 0.6s ease both;
+    }
 
-h1.hero-title {
-  font-size: clamp(3.5rem, 8vw, 6.5rem);
-  font-weight: 800;
-  line-height: 1.02;
-  letter-spacing: -0.03em;
-  margin-bottom: 1.75rem;
-  animation: fadeUp 0.6s 0.1s ease both;
-}
-h1.hero-title em {
-  font-style: normal;
-  background: linear-gradient(135deg, #a78bfa, #7c3aed);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
+    h1.hero-title {
+      font-size: clamp(3.5rem, 8vw, 6.5rem);
+      font-weight: 800;
+      line-height: 1.02;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.75rem;
+      animation: fadeUp 0.6s 0.1s ease both;
+    }
+    h1.hero-title em {
+      font-style: normal;
+      background: linear-gradient(135deg, #a78bfa, #7c3aed);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
 
-.hero-sub {
-  font-size: 1.2rem;
-  color: var(--muted);
-  line-height: 1.7;
-  max-width: 520px;
-  margin: 0 auto 3rem;
-  font-weight: 300;
-  animation: fadeUp 0.6s 0.2s ease both;
-}
+    .hero-sub {
+      font-size: 1.2rem;
+      color: var(--muted);
+      line-height: 1.7;
+      max-width: 520px;
+      margin: 0 auto 3rem;
+      font-weight: 300;
+      animation: fadeUp 0.6s 0.2s ease both;
+    }
 
-.hero-ctas {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-  animation: fadeUp 0.6s 0.3s ease both;
-}
+    .hero-ctas {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      animation: fadeUp 0.6s 0.3s ease both;
+    }
 
-.btn-primary {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
-  background: white;
-  color: #0d0d0f;
-  padding: 1rem 2.2rem;
-  border-radius: 1rem;
-  font-family: 'Syne', sans-serif;
-  font-weight: 700;
-  font-size: 1rem;
-  text-decoration: none;
-  transition: transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
-}
-.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 16px 48px rgba(0,0,0,0.5); }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: white;
+      color: #0d0d0f;
+      padding: 1rem 2.2rem;
+      border-radius: 1rem;
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 16px 48px rgba(0,0,0,0.5); }
 
-.btn-secondary {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  border: 1px solid var(--border);
-  color: var(--muted);
-  padding: 1rem 2rem;
-  border-radius: 1rem;
-  font-size: 0.95rem;
-  text-decoration: none;
-  transition: border-color 0.2s, color 0.2s;
-}
-.btn-secondary:hover { border-color: rgba(255,255,255,0.2); color: var(--text); }
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      padding: 1rem 2rem;
+      border-radius: 1rem;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-secondary:hover { border-color: rgba(255,255,255,0.2); color: var(--text); }
 
-/* platform badges */
-.platform-badges {
-  margin-top: 2rem;
-  display: flex;
-  justify-content: center;
-  gap: 0.75rem;
-  animation: fadeUp 0.6s 0.4s ease both;
-}
-.platform-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  padding: 0.45rem 1rem;
-  border-radius: 999px;
-  font-size: 0.8rem;
-  color: var(--muted);
-}
+    /* platform badges */
+    .platform-badges {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 0.75rem;
+      animation: fadeUp 0.6s 0.4s ease both;
+    }
+    .platform-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 0.45rem 1rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
 
-/* stats strip */
-.stats-strip {
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
-  flex-wrap: wrap;
-  margin-top: 4rem;
-  padding-top: 4rem;
-  border-top: 1px solid var(--border);
-  animation: fadeUp 0.6s 0.5s ease both;
-}
-.stat { text-align: center; }
-.stat-number {
-  font-family: 'Syne', sans-serif;
-  font-size: 2.2rem;
-  font-weight: 800;
-  color: var(--text);
-}
-.stat-label { font-size: 0.8rem; color: var(--muted); margin-top: 0.2rem; }
+    /* stats strip */
+    .stats-strip {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+      margin-top: 4rem;
+      padding-top: 4rem;
+      border-top: 1px solid var(--border);
+      animation: fadeUp 0.6s 0.5s ease both;
+    }
+    .stat { text-align: center; }
+    .stat-number {
+      font-family: 'Syne', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--text);
+    }
+    .stat-label { font-size: 0.8rem; color: var(--muted); margin-top: 0.2rem; }
 
-/* ── DISCOUNT BANNER ── */
-.discount-card {
-  max-width: 780px;
-  margin: 0 auto;
-  background: linear-gradient(135deg, #166534, #15803d);
-  border-radius: 1.75rem;
-  padding: 3rem;
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  gap: 2rem;
-  align-items: center;
-  box-shadow: 0 32px 80px rgba(34,197,94,0.15);
-}
-.discount-left { }
-.discount-eyebrow {
-  font-size: 1rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  font-weight: 800;
-  color: #ffffff;
-  margin-bottom: 0.75rem;
-  text-shadow: 0 0 20px rgba(255,255,255,0.3);
-}
-.discount-code-label {
-  font-family: 'Syne', sans-serif;
-  font-size: 1.15rem;
-  font-weight: 700;
-  margin-bottom: 0.6rem;
-}
-.discount-code {
-  font-family: 'DM Mono', monospace;
-  font-size: 2rem;
-  font-weight: 500;
-  background: rgba(0,0,0,0.25);
-  display: inline-block;
-  padding: 0.4rem 1.2rem;
-  border-radius: 0.75rem;
-  letter-spacing: 0.06em;
-}
-.discount-price {
-  font-family: 'Syne', sans-serif;
-  margin-top: 0.9rem;
-  font-size: 1.3rem;
-}
-/* ── AS SEEN ON ── */
-.as-seen-on {
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  background: var(--surface);
-  padding: 1.5rem 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2.5rem;
-  flex-wrap: wrap;
-}
-.as-seen-label {
-  font-size: 0.72rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--muted);
-  font-weight: 600;
-  white-space: nowrap;
-}
-.as-seen-logos {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.as-seen-item {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  color: var(--muted);
-  text-decoration: none;
-  font-size: 1rem;
-  font-weight: 500;
-  padding: 0.5rem 1.25rem;
-  border-radius: 999px;
-  border: 1px solid transparent;
-  transition: color 0.2s, border-color 0.2s, background 0.2s;
-}
-.as-seen-item i { font-size: 1.2rem; }
-.as-seen-item:hover {
-  color: var(--text);
-  border-color: var(--border);
-  background: var(--surface2);
-}
-.as-seen-divider {
-  width: 1px;
-  height: 24px;
-  background: var(--border);
-}
+    /* ── DISCOUNT BANNER ── */
+    .discount-card {
+      max-width: 780px;
+      margin: 0 auto;
+      background: linear-gradient(135deg, #166534, #15803d);
+      border-radius: 1.75rem;
+      padding: 3rem;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 2rem;
+      align-items: center;
+      box-shadow: 0 32px 80px rgba(34,197,94,0.15);
+    }
+    .discount-left { }
+    .discount-eyebrow {
+      font-size: 1rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 0.75rem;
+      text-shadow: 0 0 20px rgba(255,255,255,0.3);
+    }
+    .discount-code-label {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+    }
+    .discount-code {
+      font-family: 'DM Mono', monospace;
+      font-size: 2rem;
+      font-weight: 500;
+      background: rgba(0,0,0,0.25);
+      display: inline-block;
+      padding: 0.4rem 1.2rem;
+      border-radius: 0.75rem;
+      letter-spacing: 0.06em;
+    }
+    .discount-price {
+      font-family: 'Syne', sans-serif;
+      margin-top: 0.9rem;
+      font-size: 1.3rem;
+    }
+    /* ── AS SEEN ON ── */
+    .as-seen-on {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background: var(--surface);
+      padding: 1.5rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+    }
+    .as-seen-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .as-seen-logos {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .as-seen-item {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+      padding: 0.5rem 1.25rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      transition: color 0.2s, border-color 0.2s, background 0.2s;
+    }
+    .as-seen-item i { font-size: 1.2rem; }
+    .as-seen-item:hover {
+      color: var(--text);
+      border-color: var(--border);
+      background: var(--surface2);
+    }
+    .as-seen-divider {
+      width: 1px;
+      height: 24px;
+      background: var(--border);
+    }
 
-/* ── DISCOUNT BANNER ── */
-.discount-section { padding: 5rem 1.5rem; }
+    /* ── DISCOUNT BANNER ── */
+    .discount-section { padding: 5rem 1.5rem; }
 
-.discount-divider {
-  width: 1px;
-  height: 100px;
-  background: rgba(255,255,255,0.15);
-}
-.discount-right { }
-.discount-right ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
-.discount-right li {
-  display: flex; align-items: center; gap: 0.6rem;
-  font-size: 0.95rem; font-weight: 500;
-}
-.discount-right li.no { color: rgba(255,255,255,0.5); text-decoration: line-through; }
+    .discount-divider {
+      width: 1px;
+      height: 100px;
+      background: rgba(255,255,255,0.15);
+    }
+    .discount-right { }
+    .discount-right ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+    .discount-right li {
+      display: flex; align-items: center; gap: 0.6rem;
+      font-size: 0.95rem; font-weight: 500;
+    }
+    .discount-right li.no { color: rgba(255,255,255,0.5); text-decoration: line-through; }
 
-.copy-btn {
-  display: block;
-  width: 100%;
-  margin-top: 1.25rem;
-  background: rgba(0,0,0,0.3);
-  border: 1px solid rgba(255,255,255,0.15);
-  color: white;
-  padding: 0.65rem;
-  border-radius: 0.9rem;
-  font-family: 'Syne', sans-serif;
-  font-size: 0.85rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.2s;
-  display: flex; align-items: center; justify-content: center; gap: 0.6rem;
-}
-.copy-btn:hover { background: rgba(0,0,0,0.5); }
+    .copy-btn {
+      display: block;
+      width: 100%;
+      margin-top: 1.25rem;
+      background: rgba(0,0,0,0.3);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: white;
+      padding: 0.65rem;
+      border-radius: 0.9rem;
+      font-family: 'Syne', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+      display: flex; align-items: center; justify-content: center; gap: 0.6rem;
+    }
+    .copy-btn:hover { background: rgba(0,0,0,0.5); }
 
-/* ── MOCKUP PLACEHOLDER ── */
-.mockup-section {
-  padding: 2rem 1.5rem 5rem;
-}
-.mockup-wrap {
-  max-width: 900px;
-  margin: 0 auto;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 1.5rem;
-  overflow: hidden;
-}
-.mockup-titlebar {
-  background: var(--surface2);
-  padding: 0.85rem 1.25rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  border-bottom: 1px solid var(--border);
-}
-.dot { width: 12px; height: 12px; border-radius: 50%; }
-.dot-r { background: #ff5f57; }
-.dot-y { background: #ffbd2e; }
-.dot-g { background: #28c840; }
-.mockup-titlebar-label {
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 0.78rem;
-  color: var(--muted);
-  font-family: 'DM Mono', monospace;
-}
-.mockup-body {
-  padding: 3rem;
-  min-height: 340px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 1rem;
-  background: repeating-linear-gradient(
-    45deg,
-    transparent,
-    transparent 20px,
-    rgba(255,255,255,0.015) 20px,
-    rgba(255,255,255,0.015) 40px
-  );
-}
-.mockup-icon {
-  width: 72px; height: 72px;
-  background: rgba(124,58,237,0.15);
-  border: 1px solid rgba(124,58,237,0.3);
-  border-radius: 1rem;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 2rem;
-}
-.mockup-label { color: var(--muted); font-size: 0.9rem; }
+    /* ── MOCKUP PLACEHOLDER ── */
+    .mockup-section {
+      padding: 2rem 1.5rem 5rem;
+    }
+    .mockup-wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 1.5rem;
+      overflow: hidden;
+    }
+    .mockup-titlebar {
+      background: var(--surface2);
+      padding: 0.85rem 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .dot { width: 12px; height: 12px; border-radius: 50%; }
+    .dot-r { background: #ff5f57; }
+    .dot-y { background: #ffbd2e; }
+    .dot-g { background: #28c840; }
+    .mockup-titlebar-label {
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 0.78rem;
+      color: var(--muted);
+      font-family: 'DM Mono', monospace;
+    }
+    .mockup-body {
+      padding: 3rem;
+      min-height: 340px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 1rem;
+      background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 20px,
+        rgba(255,255,255,0.015) 20px,
+        rgba(255,255,255,0.015) 40px
+      );
+    }
+    .mockup-icon {
+      width: 72px; height: 72px;
+      background: rgba(124,58,237,0.15);
+      border: 1px solid rgba(124,58,237,0.3);
+      border-radius: 1rem;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2rem;
+    }
+    .mockup-label { color: var(--muted); font-size: 0.9rem; }
 
-/* ── FEATURES ── */
-.features-section { padding: 6rem 1.5rem; }
-.section-label {
-  font-size: 0.72rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--accent2);
-  font-weight: 600;
-  margin-bottom: 1rem;
-  display: block;
-}
-.section-title {
-  font-family: 'Syne', sans-serif;
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  margin-bottom: 4rem;
-}
-.features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5px; max-width: 1100px; margin: 0 auto; }
-.feature-card {
-  background: var(--surface);
-  padding: 2.5rem;
-  position: relative;
-  overflow: hidden;
-}
-.feature-card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(124,58,237,0.5), transparent);
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-.feature-card:hover::before { opacity: 1; }
-.feature-card:first-child { border-radius: 1.5rem 0 0 0; }
-.feature-card:nth-child(3) { border-radius: 0 1.5rem 0 0; }
-.feature-card:nth-child(4) { border-radius: 0 0 0 1.5rem; }
-.feature-card:last-child { border-radius: 0 0 1.5rem 0; }
-.feature-icon {
-  width: 52px; height: 52px;
-  background: rgba(124,58,237,0.12);
-  border-radius: 0.85rem;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.4rem;
-  margin-bottom: 1.5rem;
-}
-.feature-card h3 {
-  font-family: 'Syne', sans-serif;
-  font-size: 1.15rem;
-  font-weight: 700;
-  margin-bottom: 0.65rem;
-}
-.feature-card p { font-size: 0.9rem; color: var(--muted); line-height: 1.7; }
+    /* ── FEATURES ── */
+    .features-section { padding: 6rem 1.5rem; }
+    .section-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent2);
+      font-weight: 600;
+      margin-bottom: 1rem;
+      display: block;
+    }
+    .section-title {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 4rem;
+    }
+    .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5px; max-width: 1100px; margin: 0 auto; }
+    .feature-card {
+      background: var(--surface);
+      padding: 2.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .feature-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(124,58,237,0.5), transparent);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .feature-card:hover::before { opacity: 1; }
+    .feature-card:first-child { border-radius: 1.5rem 0 0 0; }
+    .feature-card:nth-child(3) { border-radius: 0 1.5rem 0 0; }
+    .feature-card:nth-child(4) { border-radius: 0 0 0 1.5rem; }
+    .feature-card:last-child { border-radius: 0 0 1.5rem 0; }
+    .feature-icon {
+      width: 52px; height: 52px;
+      background: rgba(124,58,237,0.12);
+      border-radius: 0.85rem;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 1.5rem;
+    }
+    .feature-card h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 0.65rem;
+    }
+    .feature-card p { font-size: 0.9rem; color: var(--muted); line-height: 1.7; }
 
-/* ── ALL 30 TOOLS ── */
-.tools-section { padding: 6rem 1.5rem; background: var(--surface); }
-.tools-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 1rem;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-.tool-card {
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: 1rem;
-  padding: 1.25rem 1.5rem;
-  display: flex;
-  align-items: center;
-  gap: 0.9rem;
-  transition: border-color 0.25s, transform 0.25s;
-  cursor: default;
-}
-.tool-card:hover {
-  border-color: rgba(124,58,237,0.4);
-  transform: translateY(-2px);
-}
-.tool-icon {
-  width: 40px; height: 40px;
-  background: rgba(124,58,237,0.1);
-  border-radius: 0.6rem;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.1rem;
-  flex-shrink: 0;
-}
-.tool-name { font-family: 'Syne', sans-serif; font-size: 0.88rem; font-weight: 600; }
-.tool-cat { font-size: 0.72rem; color: var(--muted); margin-top: 0.1rem; }
+    /* ── ALL 30 TOOLS ── */
+    .tools-section { padding: 6rem 1.5rem; background: var(--surface); }
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .tool-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      transition: border-color 0.25s, transform 0.25s;
+      cursor: default;
+    }
+    .tool-card:hover {
+      border-color: rgba(124,58,237,0.4);
+      transform: translateY(-2px);
+    }
+    .tool-icon {
+      width: 40px; height: 40px;
+      background: rgba(124,58,237,0.1);
+      border-radius: 0.6rem;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .tool-name { font-family: 'Syne', sans-serif; font-size: 0.88rem; font-weight: 600; }
+    .tool-cat { font-size: 0.72rem; color: var(--muted); margin-top: 0.1rem; }
 
-/* ── COMPARISON TABLE ── */
-.comparison-section { padding: 6rem 1.5rem; background: var(--bg); }
-.comparison-inner { max-width: 1100px; margin: 0 auto; }
+    /* ── COMPARISON TABLE ── */
+    .comparison-section { padding: 6rem 1.5rem; background: var(--bg); }
+    .comparison-inner { max-width: 1100px; margin: 0 auto; }
 
-.comparison-wrap {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  gap: 0;
-  align-items: start;
-  border-radius: 1.5rem;
-  overflow: hidden;
-  border: 1px solid var(--border);
-}
+    .comparison-wrap {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 0;
+      align-items: start;
+      border-radius: 1.5rem;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
 
-.comp-col { padding: 2.5rem; }
-.comp-theirs { background: var(--surface); }
-.comp-ours {
-  background: linear-gradient(160deg, #1a103a 0%, #150d30 100%);
-  border-left: 1px solid rgba(124,58,237,0.3);
-  position: relative;
-}
-.comp-ours::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, #7c3aed, #a78bfa);
-}
+    .comp-col { padding: 2.5rem; }
+    .comp-theirs { background: var(--surface); }
+    .comp-ours {
+      background: linear-gradient(160deg, #1a103a 0%, #150d30 100%);
+      border-left: 1px solid rgba(124,58,237,0.3);
+      position: relative;
+    }
+    .comp-ours::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #7c3aed, #a78bfa);
+    }
 
-.comp-label-badge {
-  display: inline-block;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 0.35rem 0.9rem;
-  border-radius: 999px;
-  margin-bottom: 0.9rem;
-}
-.comp-label-badge.their {
-  background: rgba(239,68,68,0.12);
-  color: #f87171;
-  border: 1px solid rgba(239,68,68,0.2);
-}
-.comp-label-badge.ours {
-  background: rgba(124,58,237,0.15);
-  color: var(--accent2);
-  border: 1px solid rgba(124,58,237,0.3);
-}
+    .comp-label-badge {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      margin-bottom: 0.9rem;
+    }
+    .comp-label-badge.their {
+      background: rgba(239,68,68,0.12);
+      color: #f87171;
+      border: 1px solid rgba(239,68,68,0.2);
+    }
+    .comp-label-badge.ours {
+      background: rgba(124,58,237,0.15);
+      color: var(--accent2);
+      border: 1px solid rgba(124,58,237,0.3);
+    }
 
-.comp-title {
-  font-family: 'Syne', sans-serif;
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-bottom: 1.75rem;
-  color: var(--text);
-}
+    .comp-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 1.75rem;
+      color: var(--text);
+    }
 
-.comp-rows { display: flex; flex-direction: column; gap: 0; }
-.comp-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 0;
-  border-bottom: 1px solid var(--border);
-  gap: 1rem;
-}
-.comp-row:last-child { border-bottom: none; }
-.ours-row { border-bottom-color: rgba(124,58,237,0.15); }
+    .comp-rows { display: flex; flex-direction: column; gap: 0; }
+    .comp-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border);
+      gap: 1rem;
+    }
+    .comp-row:last-child { border-bottom: none; }
+    .ours-row { border-bottom-color: rgba(124,58,237,0.15); }
 
-.comp-tool {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  flex: 1;
-}
-.comp-icon { font-size: 1.3rem; flex-shrink: 0; }
-.comp-tool-name { font-size: 0.9rem; font-weight: 600; }
-.comp-tool-desc { font-size: 0.75rem; color: var(--muted); margin-top: 0.1rem; }
+    .comp-tool {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex: 1;
+    }
+    .comp-icon { font-size: 1.3rem; flex-shrink: 0; }
+    .comp-tool-name { font-size: 0.9rem; font-weight: 600; }
+    .comp-tool-desc { font-size: 0.75rem; color: var(--muted); margin-top: 0.1rem; }
 
-.comp-price-col { text-align: right; flex-shrink: 0; }
-.comp-price-mo {
-  display: block;
-  font-family: 'Syne', sans-serif;
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: #f87171;
-}
-.comp-price-mo span { font-size: 0.75rem; font-weight: 400; opacity: 0.7; }
-.comp-price-yr {
-  display: block;
-  font-size: 0.72rem;
-  color: var(--muted);
-  margin-top: 0.1rem;
-}
-.comp-included {
-  font-family: 'Syne', sans-serif;
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: #4ade80;
-}
+    .comp-price-col { text-align: right; flex-shrink: 0; }
+    .comp-price-mo {
+      display: block;
+      font-family: 'Syne', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #f87171;
+    }
+    .comp-price-mo span { font-size: 0.75rem; font-weight: 400; opacity: 0.7; }
+    .comp-price-yr {
+      display: block;
+      font-size: 0.72rem;
+      color: var(--muted);
+      margin-top: 0.1rem;
+    }
+    .comp-included {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #4ade80;
+    }
 
-.comp-total {
-  margin-top: 1.75rem;
-  padding-top: 1.75rem;
-  border-top: 1px solid var(--border);
-}
-.comp-total-label {
-  font-size: 0.72rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--muted);
-  font-weight: 600;
-  margin-bottom: 0.4rem;
-}
-.comp-total-amount {
-  font-family: 'Syne', sans-serif;
-  font-size: 2.2rem;
-  font-weight: 800;
-  line-height: 1;
-  margin-bottom: 0.4rem;
-}
-.their-amount { color: #f87171; }
-.ours-amount { color: #4ade80; }
-.ours-amount-note {
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--muted);
-}
-.comp-total-sub { font-size: 0.82rem; color: var(--muted); margin-bottom: 1.25rem; }
+    .comp-total {
+      margin-top: 1.75rem;
+      padding-top: 1.75rem;
+      border-top: 1px solid var(--border);
+    }
+    .comp-total-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+    .comp-total-amount {
+      font-family: 'Syne', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 800;
+      line-height: 1;
+      margin-bottom: 0.4rem;
+    }
+    .their-amount { color: #f87171; }
+    .ours-amount { color: #4ade80; }
+    .ours-amount-note {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--muted);
+    }
+    .comp-total-sub { font-size: 0.82rem; color: var(--muted); margin-bottom: 1.25rem; }
 
-.comp-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  background: var(--accent);
-  color: white;
-  padding: 0.85rem 1.75rem;
-  border-radius: 0.9rem;
-  font-family: 'Syne', sans-serif;
-  font-size: 0.9rem;
-  font-weight: 700;
-  text-decoration: none;
-  transition: opacity 0.2s, transform 0.2s;
-  margin-top: 0.25rem;
-}
-.comp-cta:hover { opacity: 0.85; transform: translateY(-1px); }
+    .comp-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: var(--accent);
+      color: white;
+      padding: 0.85rem 1.75rem;
+      border-radius: 0.9rem;
+      font-family: 'Syne', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: opacity 0.2s, transform 0.2s;
+      margin-top: 0.25rem;
+    }
+    .comp-cta:hover { opacity: 0.85; transform: translateY(-1px); }
 
-/* VS divider */
-.comp-vs {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 0.5rem;
-  background: var(--bg);
-  position: relative;
-}
-.comp-vs-circle {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: var(--surface2);
-  border: 1px solid var(--border);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Syne', sans-serif;
-  font-size: 0.8rem;
-  font-weight: 800;
-  color: var(--muted);
-  position: sticky;
-  top: 50%;
-}
+    /* VS divider */
+    .comp-vs {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 0.5rem;
+      background: var(--bg);
+      position: relative;
+    }
+    .comp-vs-circle {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Syne', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: var(--muted);
+      position: sticky;
+      top: 50%;
+    }
 
-/* savings callout */
-.savings-callout {
-  margin-top: 2rem;
-  background: linear-gradient(135deg, rgba(124,58,237,0.1), rgba(124,58,237,0.05));
-  border: 1px solid rgba(124,58,237,0.25);
-  border-radius: 1.25rem;
-  padding: 2rem;
-}
-.savings-inner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-.savings-stat { text-align: center; }
-.savings-number {
-  font-family: 'Syne', sans-serif;
-  font-size: 2.2rem;
-  font-weight: 800;
-  color: var(--accent2);
-}
-.savings-label { font-size: 0.8rem; color: var(--muted); margin-top: 0.2rem; }
-.savings-divider {
-  width: 1px;
-  height: 48px;
-  background: var(--border);
-}
+    /* savings callout */
+    .savings-callout {
+      margin-top: 2rem;
+      background: linear-gradient(135deg, rgba(124,58,237,0.1), rgba(124,58,237,0.05));
+      border: 1px solid rgba(124,58,237,0.25);
+      border-radius: 1.25rem;
+      padding: 2rem;
+    }
+    .savings-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .savings-stat { text-align: center; }
+    .savings-number {
+      font-family: 'Syne', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--accent2);
+    }
+    .savings-label { font-size: 0.8rem; color: var(--muted); margin-top: 0.2rem; }
+    .savings-divider {
+      width: 1px;
+      height: 48px;
+      background: var(--border);
+    }
 
-@media (max-width: 860px) {
-  .comparison-wrap {
-    grid-template-columns: 1fr;
-  }
-  .comp-vs { padding: 1rem; flex-direction: row; }
-  .comp-vs::before, .comp-vs::after {
-    content: '';
-    flex: 1;
-    height: 1px;
-    background: var(--border);
-  }
-  .comp-ours { border-left: none; border-top: 1px solid rgba(124,58,237,0.3); }
-  .savings-divider { display: none; }
-}
+    @media (max-width: 860px) {
+      .comparison-wrap {
+        grid-template-columns: 1fr;
+      }
+      .comp-vs { padding: 1rem; flex-direction: row; }
+      .comp-vs::before, .comp-vs::after {
+        content: '';
+        flex: 1;
+        height: 1px;
+        background: var(--border);
+      }
+      .comp-ours { border-left: none; border-top: 1px solid rgba(124,58,237,0.3); }
+      .savings-divider { display: none; }
+    }
 
-/* ── TESTIMONIALS ── */
-.testimonials-section { padding: 6rem 1.5rem; }
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 1.5rem;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-.testimonial {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 1.25rem;
-  padding: 2rem;
-}
-.testimonial-stars { color: #fbbf24; font-size: 0.85rem; margin-bottom: 1rem; letter-spacing: 0.05em; }
-.testimonial-text {
-  font-size: 0.95rem;
-  line-height: 1.75;
-  color: #c4c4cc;
-  margin-bottom: 1.5rem;
-}
-.testimonial-author { display: flex; align-items: center; gap: 0.8rem; }
-.avatar {
-  width: 42px; height: 42px;
-  border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  font-family: 'Syne', sans-serif;
-  font-weight: 800;
-  font-size: 0.9rem;
-  flex-shrink: 0;
-}
-.author-info { }
-.author-name { font-weight: 600; font-size: 0.9rem; }
-.author-handle { font-size: 0.78rem; color: var(--muted); }
+    /* ── TESTIMONIALS ── */
+    .testimonials-section { padding: 6rem 1.5rem; }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .testimonial {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 1.25rem;
+      padding: 2rem;
+    }
+    .testimonial-stars { color: #fbbf24; font-size: 0.85rem; margin-bottom: 1rem; letter-spacing: 0.05em; }
+    .testimonial-text {
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #c4c4cc;
+      margin-bottom: 1.5rem;
+    }
+    .testimonial-author { display: flex; align-items: center; gap: 0.8rem; }
+    .avatar {
+      width: 42px; height: 42px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+    .author-info { }
+    .author-name { font-weight: 600; font-size: 0.9rem; }
+    .author-handle { font-size: 0.78rem; color: var(--muted); }
 
-/* ── HOW IT WORKS ── */
-.how-section { padding: 6rem 1.5rem; background: var(--surface); }
-.how-steps {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0;
-  max-width: 900px;
-  margin: 0 auto;
-  position: relative;
-}
-.how-steps::before {
-  content: '';
-  position: absolute;
-  top: 36px;
-  left: calc(16.66% + 1rem);
-  right: calc(16.66% + 1rem);
-  height: 2px;
-  background: linear-gradient(90deg, var(--accent), var(--accent2));
-  opacity: 0.3;
-  pointer-events: none;
-}
-.how-step {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 0 2rem;
-  position: relative;
-}
-.how-num {
-  width: 72px;
-  height: 72px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent), var(--accent2));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Syne', sans-serif;
-  font-size: 1.6rem;
-  font-weight: 800;
-  color: white;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 8px 24px rgba(124,58,237,0.35);
-  position: relative;
-  z-index: 1;
-  flex-shrink: 0;
-}
-.how-step h3 {
-  font-family: 'Syne', sans-serif;
-  font-size: 1.05rem;
-  font-weight: 700;
-  margin-bottom: 0.6rem;
-}
-.how-step p { font-size: 0.88rem; color: var(--muted); line-height: 1.7; }
-.how-step-icon { font-size: 1.6rem; margin-bottom: 0.75rem; }
+    /* ── HOW IT WORKS ── */
+    .how-section { padding: 6rem 1.5rem; background: var(--surface); }
+    .how-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .how-steps::before {
+      content: '';
+      position: absolute;
+      top: 36px;
+      left: calc(16.66% + 1rem);
+      right: calc(16.66% + 1rem);
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      opacity: 0.3;
+      pointer-events: none;
+    }
+    .how-step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0 2rem;
+      position: relative;
+    }
+    .how-num {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Syne', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: white;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 8px 24px rgba(124,58,237,0.35);
+      position: relative;
+      z-index: 1;
+      flex-shrink: 0;
+    }
+    .how-step h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+    }
+    .how-step p { font-size: 0.88rem; color: var(--muted); line-height: 1.7; }
+    .how-step-icon { font-size: 1.6rem; margin-bottom: 0.75rem; }
 
-@media (max-width: 680px) {
-  .how-steps { grid-template-columns: 1fr; gap: 2.5rem; }
-  .how-steps::before { display: none; }
-}
+    @media (max-width: 680px) {
+      .how-steps { grid-template-columns: 1fr; gap: 2.5rem; }
+      .how-steps::before { display: none; }
+    }
 
-/* ── SOCIAL PROOF TICKER ── */
-.proof-ticker {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  padding: 0.45rem 1rem;
-  font-size: 0.82rem;
-  color: var(--muted);
-  margin-top: 1.5rem;
-  animation: fadeUp 0.6s 0.6s ease both;
-}
-.proof-ticker-dot {
-  width: 8px; height: 8px;
-  background: var(--green);
-  border-radius: 50%;
-  animation: pulse-dot 2s infinite;
-  flex-shrink: 0;
-}
-@keyframes pulse-dot {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.6; transform: scale(0.85); }
-}
-.proof-ticker strong { color: var(--text); font-weight: 600; }
+    /* ── SOCIAL PROOF TICKER ── */
+    .proof-ticker {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 0.45rem 1rem;
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-top: 1.5rem;
+      animation: fadeUp 0.6s 0.6s ease both;
+    }
+    .proof-ticker-dot {
+      width: 8px; height: 8px;
+      background: var(--green);
+      border-radius: 50%;
+      animation: pulse-dot 2s infinite;
+      flex-shrink: 0;
+    }
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.6; transform: scale(0.85); }
+    }
+    .proof-ticker strong { color: var(--text); font-weight: 600; }
 
-/* ── EMAIL CAPTURE ── */
-.email-section {
-  padding: 5rem 1.5rem;
-  background: var(--surface);
-  border-top: 1px solid var(--border);
-}
-.email-inner {
-  max-width: 560px;
-  margin: 0 auto;
-  text-align: center;
-}
-.email-inner .section-label { margin-bottom: 0.75rem; }
-.email-inner h2 {
-  font-family: 'Syne', sans-serif;
-  font-size: clamp(1.6rem, 3vw, 2.2rem);
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  margin-bottom: 0.75rem;
-}
-.email-inner p { color: var(--muted); font-size: 0.95rem; margin-bottom: 2rem; }
+    /* ── EMAIL CAPTURE ── */
+    .email-section {
+      padding: 5rem 1.5rem;
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+    }
+    .email-inner {
+      max-width: 560px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .email-inner .section-label { margin-bottom: 0.75rem; }
+    .email-inner h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.75rem;
+    }
+    .email-inner p { color: var(--muted); font-size: 0.95rem; margin-bottom: 2rem; }
 
-.email-form {
-  display: flex;
-  gap: 0.6rem;
-  max-width: 460px;
-  margin: 0 auto;
-  flex-wrap: wrap;
-}
-.email-input {
-  flex: 1;
-  min-width: 200px;
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: 0.9rem;
-  padding: 0.85rem 1.2rem;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.95rem;
-  color: var(--text);
-  outline: none;
-  transition: border-color 0.2s;
-}
-.email-input::placeholder { color: var(--muted); }
-.email-input:focus { border-color: var(--accent); }
-.email-submit {
-  background: var(--accent);
-  color: white;
-  border: none;
-  border-radius: 0.9rem;
-  padding: 0.85rem 1.5rem;
-  font-family: 'Syne', sans-serif;
-  font-size: 0.9rem;
-  font-weight: 700;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: opacity 0.2s, transform 0.2s;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-.email-submit:hover { opacity: 0.85; transform: translateY(-1px); }
-.email-note { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; }
-.email-success {
-  display: none;
-  align-items: center;
-  justify-content: center;
-  gap: 0.6rem;
-  color: var(--green);
-  font-weight: 600;
-  font-size: 0.95rem;
-  padding: 0.85rem;
-  background: rgba(34,197,94,0.08);
-  border: 1px solid rgba(34,197,94,0.2);
-  border-radius: 0.9rem;
-  max-width: 460px;
-  margin: 0 auto;
-}
+    .email-form {
+      display: flex;
+      gap: 0.6rem;
+      max-width: 460px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
+    .email-input {
+      flex: 1;
+      min-width: 200px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 0.9rem;
+      padding: 0.85rem 1.2rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      color: var(--text);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .email-input::placeholder { color: var(--muted); }
+    .email-input:focus { border-color: var(--accent); }
+    .email-submit {
+      background: var(--accent);
+      color: white;
+      border: none;
+      border-radius: 0.9rem;
+      padding: 0.85rem 1.5rem;
+      font-family: 'Syne', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: opacity 0.2s, transform 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .email-submit:hover { opacity: 0.85; transform: translateY(-1px); }
+    .email-note { font-size: 0.75rem; color: var(--muted); margin-top: 0.9rem; }
+    .email-success {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      color: var(--green);
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 0.85rem;
+      background: rgba(34,197,94,0.08);
+      border: 1px solid rgba(34,197,94,0.2);
+      border-radius: 0.9rem;
+      max-width: 460px;
+      margin: 0 auto;
+    }
 
-/* ── CHANGELOG ── */
-.changelog-section { padding: 6rem 1.5rem; }
-.changelog-inner { max-width: 760px; margin: 0 auto; }
+    /* ── CHANGELOG ── */
+    .changelog-section { padding: 6rem 1.5rem; }
+    .changelog-inner { max-width: 760px; margin: 0 auto; }
 
-.changelog-list { display: flex; flex-direction: column; gap: 0; margin-top: 0; }
+    .changelog-list { display: flex; flex-direction: column; gap: 0; margin-top: 0; }
 
-.changelog-entry {
-  display: grid;
-  grid-template-columns: 120px 1fr;
-  gap: 0 2rem;
-  padding: 2rem 0;
-  border-bottom: 1px solid var(--border);
-  position: relative;
-}
-.changelog-entry:last-child { border-bottom: none; }
+    .changelog-entry {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 0 2rem;
+      padding: 2rem 0;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+    }
+    .changelog-entry:last-child { border-bottom: none; }
 
-.changelog-meta { padding-top: 0.2rem; }
-.changelog-version {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.82rem;
-  font-weight: 500;
-  color: var(--accent2);
-  background: rgba(124,58,237,0.1);
-  border: 1px solid rgba(124,58,237,0.2);
-  display: inline-block;
-  padding: 0.2rem 0.6rem;
-  border-radius: 0.4rem;
-  margin-bottom: 0.4rem;
-  white-space: nowrap;
-}
-.changelog-date {
-  font-size: 0.72rem;
-  color: var(--muted);
-  display: block;
-}
+    .changelog-meta { padding-top: 0.2rem; }
+    .changelog-version {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--accent2);
+      background: rgba(124,58,237,0.1);
+      border: 1px solid rgba(124,58,237,0.2);
+      display: inline-block;
+      padding: 0.2rem 0.6rem;
+      border-radius: 0.4rem;
+      margin-bottom: 0.4rem;
+      white-space: nowrap;
+    }
+    .changelog-date {
+      font-size: 0.72rem;
+      color: var(--muted);
+      display: block;
+    }
 
-.changelog-content h4 {
-  font-family: 'Syne', sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  margin-bottom: 0.75rem;
-  color: var(--text);
-}
-.changelog-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.85rem; }
-.changelog-tag {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  padding: 0.2rem 0.55rem;
-  border-radius: 999px;
-}
-.tag-new  { background: rgba(34,197,94,0.12);  color: #4ade80;  border: 1px solid rgba(34,197,94,0.2); }
-.tag-improved { background: rgba(59,130,246,0.12); color: #60a5fa; border: 1px solid rgba(59,130,246,0.2); }
-.tag-fix  { background: rgba(251,191,36,0.12); color: #fbbf24; border: 1px solid rgba(251,191,36,0.2); }
+    .changelog-content h4 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+    .changelog-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.85rem; }
+    .changelog-tag {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+    }
+    .tag-new  { background: rgba(34,197,94,0.12);  color: #4ade80;  border: 1px solid rgba(34,197,94,0.2); }
+    .tag-improved { background: rgba(59,130,246,0.12); color: #60a5fa; border: 1px solid rgba(59,130,246,0.2); }
+    .tag-fix  { background: rgba(251,191,36,0.12); color: #fbbf24; border: 1px solid rgba(251,191,36,0.2); }
 
-.changelog-items { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
-.changelog-items li {
-  font-size: 0.9rem;
-  color: var(--muted);
-  line-height: 1.6;
-  display: flex;
-  gap: 0.6rem;
-}
-.changelog-items li::before {
-  content: '—';
-  color: var(--accent2);
-  flex-shrink: 0;
-  opacity: 0.6;
-}
+    .changelog-items { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+    .changelog-items li {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.6;
+      display: flex;
+      gap: 0.6rem;
+    }
+    .changelog-items li::before {
+      content: '—';
+      color: var(--accent2);
+      flex-shrink: 0;
+      opacity: 0.6;
+    }
 
-@media (max-width: 600px) {
-  .changelog-entry { grid-template-columns: 1fr; gap: 0.75rem; }
-}
+    @media (max-width: 600px) {
+      .changelog-entry { grid-template-columns: 1fr; gap: 0.75rem; }
+    }
 
-/* ── FAQ ── */
-.faq-section { padding: 6rem 1.5rem; background: var(--surface); }
-.faq-list { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 0; }
-.faq-item {
-  border-bottom: 1px solid var(--border);
-  overflow: hidden;
-}
-.faq-item:first-child { border-top: 1px solid var(--border); }
-.faq-q {
-  width: 100%;
-  background: none;
-  border: none;
-  color: var(--text);
-  text-align: left;
-  padding: 1.5rem 0;
-  font-family: 'Syne', sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-}
-.faq-q .chevron {
-  transition: transform 0.3s;
-  color: var(--muted);
-  flex-shrink: 0;
-  font-size: 0.8rem;
-}
-.faq-item.open .faq-q .chevron { transform: rotate(180deg); }
-.faq-a {
-  font-size: 0.93rem;
-  color: var(--muted);
-  line-height: 1.8;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease, padding 0.3s ease;
-}
-.faq-item.open .faq-a { max-height: 300px; padding-bottom: 1.5rem; }
+    /* ── FAQ ── */
+    .faq-section { padding: 6rem 1.5rem; background: var(--surface); }
+    .faq-list { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 0; }
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .faq-item:first-child { border-top: 1px solid var(--border); }
+    .faq-q {
+      width: 100%;
+      background: none;
+      border: none;
+      color: var(--text);
+      text-align: left;
+      padding: 1.5rem 0;
+      font-family: 'Syne', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+    .faq-q .chevron {
+      transition: transform 0.3s;
+      color: var(--muted);
+      flex-shrink: 0;
+      font-size: 0.8rem;
+    }
+    .faq-item.open .faq-q .chevron { transform: rotate(180deg); }
+    .faq-a {
+      font-size: 0.93rem;
+      color: var(--muted);
+      line-height: 1.8;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s ease;
+    }
+    .faq-item.open .faq-a { max-height: 300px; padding-bottom: 1.5rem; }
 
-/* ── COUNTDOWN TIMER ── */
-.countdown-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  margin-top: 1rem;
-  flex-wrap: wrap;
-}
-.countdown-label {
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(0,0,0,0.5);
-  margin-right: 0.25rem;
-}
-.countdown-units {
-  display: flex;
-  gap: 0.4rem;
-  align-items: center;
-}
-.countdown-unit {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: rgba(0,0,0,0.2);
-  border-radius: 0.5rem;
-  padding: 0.3rem 0.55rem;
-  min-width: 44px;
-}
-.countdown-num {
-  font-family: 'DM Mono', monospace;
-  font-size: 1.2rem;
-  font-weight: 500;
-  line-height: 1;
-  color: #fff;
-}
-.countdown-unit-label {
-  font-size: 0.55rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.6);
-  margin-top: 0.2rem;
-}
-.countdown-sep {
-  font-family: 'DM Mono', monospace;
-  font-size: 1.1rem;
-  color: rgba(0,0,0,0.3);
-  line-height: 1;
-  margin-bottom: 0.4rem;
-}
+    /* ── COUNTDOWN TIMER ── */
+    .countdown-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+    }
+    .countdown-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(0,0,0,0.5);
+      margin-right: 0.25rem;
+    }
+    .countdown-units {
+      display: flex;
+      gap: 0.4rem;
+      align-items: center;
+    }
+    .countdown-unit {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: rgba(0,0,0,0.2);
+      border-radius: 0.5rem;
+      padding: 0.3rem 0.55rem;
+      min-width: 44px;
+    }
+    .countdown-num {
+      font-family: 'DM Mono', monospace;
+      font-size: 1.2rem;
+      font-weight: 500;
+      line-height: 1;
+      color: #fff;
+    }
+    .countdown-unit-label {
+      font-size: 0.55rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+      margin-top: 0.2rem;
+    }
+    .countdown-sep {
+      font-family: 'DM Mono', monospace;
+      font-size: 1.1rem;
+      color: rgba(0,0,0,0.3);
+      line-height: 1;
+      margin-bottom: 0.4rem;
+    }
 
-/* Final CTA countdown variant (dark theme) */
-.countdown-wrap.dark .countdown-label { color: var(--muted); }
-.countdown-wrap.dark .countdown-unit { background: var(--surface); border: 1px solid var(--border); }
-.countdown-wrap.dark .countdown-sep { color: var(--border); }
+    /* Final CTA countdown variant (dark theme) */
+    .countdown-wrap.dark .countdown-label { color: var(--muted); }
+    .countdown-wrap.dark .countdown-unit { background: var(--surface); border: 1px solid var(--border); }
+    .countdown-wrap.dark .countdown-sep { color: var(--border); }
 
-/* ── FINAL CTA ── */
-.final-cta { padding: 8rem 1.5rem; text-align: center; position: relative; overflow: hidden; }
-.final-cta::before {
-  content: '';
-  position: absolute;
-  bottom: -40%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 700px;
-  height: 700px;
-  background: radial-gradient(circle, rgba(124,58,237,0.15) 0%, transparent 70%);
-  pointer-events: none;
-}
-.final-cta-inner { position: relative; z-index: 1; }
-.final-cta h2 {
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  margin-bottom: 1.25rem;
-}
-.final-cta p { color: var(--muted); font-size: 1.1rem; margin-bottom: 3rem; }
+    /* ── FINAL CTA ── */
+    .final-cta { padding: 8rem 1.5rem; text-align: center; position: relative; overflow: hidden; }
+    .final-cta::before {
+      content: '';
+      position: absolute;
+      bottom: -40%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(circle, rgba(124,58,237,0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .final-cta-inner { position: relative; z-index: 1; }
+    .final-cta h2 {
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.25rem;
+    }
+    .final-cta p { color: var(--muted); font-size: 1.1rem; margin-bottom: 3rem; }
 
-/* ── FOOTER ── */
-footer {
-  border-top: 1px solid var(--border);
-  padding: 2rem 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1rem;
-  font-size: 0.82rem;
-  color: var(--muted);
-  max-width: 1100px;
-  margin: 0 auto;
-}
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.82rem;
+      color: var(--muted);
+      max-width: 1100px;
+      margin: 0 auto;
+    }
 
-/* ── SCROLL TO TOP ── */
-.scroll-top {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  width: 44px;
-  height: 44px;
-  background: var(--accent);
-  border: none;
-  border-radius: 50%;
-  color: white;
-  font-size: 1.1rem;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 20px rgba(124,58,237,0.4);
-  opacity: 0;
-  transform: translateY(12px);
-  transition: opacity 0.3s, transform 0.3s;
-  z-index: 200;
-  pointer-events: none;
-}
-.scroll-top.visible {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: all;
-}
-.scroll-top:hover { background: #6d28d9; }
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+    /* ── SCROLL TO TOP ── */
+    .scroll-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 44px;
+      height: 44px;
+      background: var(--accent);
+      border: none;
+      border-radius: 50%;
+      color: white;
+      font-size: 1.1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(124,58,237,0.4);
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity 0.3s, transform 0.3s;
+      z-index: 200;
+      pointer-events: none;
+    }
+    .scroll-top.visible {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: all;
+    }
+    .scroll-top:hover { background: #6d28d9; }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
-.reveal {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-.reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
 
-/* ── RESPONSIVE ── */
-@media (max-width: 720px) {
-  nav { padding: 1rem 1.25rem; }
-  .nav-links { display: none; }
-  .nav-links.open {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    top: 61px; left: 0; right: 0;
-    background: rgba(13,13,15,0.97);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border);
-    padding: 1.5rem 2rem;
-    gap: 1.25rem;
-    z-index: 99;
-  }
-  .nav-links.open a { font-size: 1.1rem; color: var(--text); }
-  .hamburger { display: flex; }
-  .discount-card { grid-template-columns: 1fr; }
-  .discount-divider { display: none; }
-  .feature-card:first-child, .feature-card:nth-child(3),
-  .feature-card:nth-child(4), .feature-card:last-child { border-radius: 0; }
-  .features-grid { gap: 2px; }
-}
-.hamburger {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0.25rem;
-  z-index: 101;
-}
-.hamburger span {
-  display: block;
-  width: 22px;
-  height: 2px;
-  background: var(--text);
-  border-radius: 2px;
-  transition: transform 0.3s, opacity 0.3s;
-}
-.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.hamburger.open span:nth-child(2) { opacity: 0; }
-.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-```
-
+    /* ── RESPONSIVE ── */
+    @media (max-width: 720px) {
+      nav { padding: 1rem 1.25rem; }
+      .nav-links { display: none; }
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 61px; left: 0; right: 0;
+        background: rgba(13,13,15,0.97);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border);
+        padding: 1.5rem 2rem;
+        gap: 1.25rem;
+        z-index: 99;
+      }
+      .nav-links.open a { font-size: 1.1rem; color: var(--text); }
+      .hamburger { display: flex; }
+      .discount-card { grid-template-columns: 1fr; }
+      .discount-divider { display: none; }
+      .feature-card:first-child, .feature-card:nth-child(3),
+      .feature-card:nth-child(4), .feature-card:last-child { border-radius: 0; }
+      .features-grid { gap: 2px; }
+    }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.25rem;
+      z-index: 101;
+    }
+    .hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
   </style>
 </head>
 <body>
 
   <!-- NAV -->
-
   <nav>
     <div class="nav-logo">⚡ <span>SMSAK</span> <span style="color:var(--muted);font-weight:400;font-size:0.8rem;">v4.3.0</span></div>
     <div class="nav-links" id="navLinks">
@@ -1436,7 +1427,6 @@ footer {
   </nav>
 
   <!-- HERO -->
-
   <header class="hero">
     <div class="hero-inner">
       <div class="hero-badge">
@@ -1455,7 +1445,7 @@ footer {
           Buy on Gumroad
         </a>
         <a href="#tools" class="btn-secondary">
-          <i class="fa-solid fa-grid-2"></i>
+          <i class="fa-solid fa-border-all"></i>
           See all 30 tools
         </a>
       </div>
@@ -1464,39 +1454,35 @@ footer {
         <span class="platform-badge"><i class="fa-brands fa-apple"></i> macOS</span>
       </div>
 
-```
-  <!-- SOCIAL PROOF TICKER -->
-  <div style="display:flex;justify-content:center;">
-    <div class="proof-ticker">
-      <span class="proof-ticker-dot"></span>
-      🔥 <strong id="tickerCount">47</strong> people bought this week
+      <!-- SOCIAL PROOF TICKER -->
+      <div style="display:flex;justify-content:center;">
+        <div class="proof-ticker">
+          <span class="proof-ticker-dot"></span>
+          🔥 <strong id="tickerCount">47</strong> people bought this week
+        </div>
+      </div>
+      <div class="stats-strip">
+        <div class="stat">
+          <div class="stat-number">10,000+</div>
+          <div class="stat-label">Active creators</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">30</div>
+          <div class="stat-label">Powerful tools</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">$0/mo</div>
+          <div class="stat-label">No subscription</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">∞</div>
+          <div class="stat-label">Free updates</div>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="stats-strip">
-    <div class="stat">
-      <div class="stat-number">10,000+</div>
-      <div class="stat-label">Active creators</div>
-    </div>
-    <div class="stat">
-      <div class="stat-number">30</div>
-      <div class="stat-label">Powerful tools</div>
-    </div>
-    <div class="stat">
-      <div class="stat-number">$0/mo</div>
-      <div class="stat-label">No subscription</div>
-    </div>
-    <div class="stat">
-      <div class="stat-number">∞</div>
-      <div class="stat-label">Free updates</div>
-    </div>
-  </div>
-</div>
-```
-
   </header>
 
   <!-- AS SEEN ON -->
-
   <section class="as-seen-on">
     <p class="as-seen-label">As seen on</p>
     <div class="as-seen-logos">
@@ -1513,7 +1499,6 @@ footer {
   </section>
 
   <!-- DISCOUNT BANNER -->
-
   <section class="discount-section">
     <div class="discount-card">
       <div class="discount-left">
@@ -1539,28 +1524,24 @@ footer {
           <span id="copyText">Copy Code: WEB1000</span>
         </button>
 
-```
-    <!-- COUNTDOWN -->
-    <div class="countdown-wrap" id="countdown-banner">
-      <span class="countdown-label">⏳ Offer ends in</span>
-      <div class="countdown-units">
-        <div class="countdown-unit"><span class="countdown-num" id="b-days">07</span><span class="countdown-unit-label">Days</span></div>
-        <span class="countdown-sep">:</span>
-        <div class="countdown-unit"><span class="countdown-num" id="b-hours">00</span><span class="countdown-unit-label">Hours</span></div>
-        <span class="countdown-sep">:</span>
-        <div class="countdown-unit"><span class="countdown-num" id="b-mins">00</span><span class="countdown-unit-label">Mins</span></div>
-        <span class="countdown-sep">:</span>
-        <div class="countdown-unit"><span class="countdown-num" id="b-secs">00</span><span class="countdown-unit-label">Secs</span></div>
+        <!-- COUNTDOWN -->
+        <div class="countdown-wrap" id="countdown-banner">
+          <span class="countdown-label">⏳ Offer ends in</span>
+          <div class="countdown-units">
+            <div class="countdown-unit"><span class="countdown-num" id="b-days">07</span><span class="countdown-unit-label">Days</span></div>
+            <span class="countdown-sep">:</span>
+            <div class="countdown-unit"><span class="countdown-num" id="b-hours">00</span><span class="countdown-unit-label">Hours</span></div>
+            <span class="countdown-sep">:</span>
+            <div class="countdown-unit"><span class="countdown-num" id="b-mins">00</span><span class="countdown-unit-label">Mins</span></div>
+            <span class="countdown-sep">:</span>
+            <div class="countdown-unit"><span class="countdown-num" id="b-secs">00</span><span class="countdown-unit-label">Secs</span></div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-```
-
   </section>
 
   <!-- APP MOCKUP -->
-
   <section class="mockup-section">
     <div class="mockup-wrap reveal">
       <div class="mockup-titlebar">
@@ -1577,7 +1558,6 @@ footer {
   </section>
 
   <!-- HOW IT WORKS -->
-
   <section class="how-section">
     <div style="max-width:900px;margin:0 auto;text-align:center;margin-bottom:4rem;">
       <span class="section-label">Simple by design</span>
@@ -1606,7 +1586,6 @@ footer {
   </section>
 
   <!-- FEATURES -->
-
   <section class="features-section" id="features">
     <div style="max-width:1100px;margin:0 auto;text-align:center;">
       <span class="section-label">Why creators choose SMSAK</span>
@@ -1647,7 +1626,6 @@ footer {
   </section>
 
   <!-- ALL 30 TOOLS -->
-
   <section class="tools-section" id="tools">
     <div style="max-width:1100px;margin:0 auto;text-align:center;margin-bottom:3rem;">
       <span class="section-label">Complete toolkit</span>
@@ -1690,7 +1668,6 @@ footer {
   </section>
 
   <!-- COMPARISON TABLE -->
-
   <section class="comparison-section">
     <div class="comparison-inner">
       <div style="text-align:center;margin-bottom:3.5rem;">
@@ -1699,190 +1676,186 @@ footer {
         <p style="color:var(--muted);font-size:1.05rem;max-width:520px;margin:0 auto;">Most creators are unknowingly burning <strong style="color:var(--text);">$1,300+ every year</strong> on separate tools SMSAK already replaces.</p>
       </div>
 
-```
-  <div class="comparison-wrap reveal">
-    <!-- THEIR STACK -->
-    <div class="comp-col comp-theirs">
-      <div class="comp-header">
-        <span class="comp-label-badge their">❌ The old way</span>
-        <h3 class="comp-title">Paying for everything separately</h3>
+      <div class="comparison-wrap reveal">
+        <!-- THEIR STACK -->
+        <div class="comp-col comp-theirs">
+          <div class="comp-header">
+            <span class="comp-label-badge their">❌ The old way</span>
+            <h3 class="comp-title">Paying for everything separately</h3>
+          </div>
+          <div class="comp-rows">
+            <div class="comp-row">
+              <div class="comp-tool">
+                <span class="comp-icon">🎬</span>
+                <div>
+                  <div class="comp-tool-name">CapCut Pro</div>
+                  <div class="comp-tool-desc">Video editing</div>
+                </div>
+              </div>
+              <div class="comp-price-col">
+                <span class="comp-price-mo">$19.99<span>/mo</span></span>
+                <span class="comp-price-yr">$239/yr</span>
+              </div>
+            </div>
+            <div class="comp-row">
+              <div class="comp-tool">
+                <span class="comp-icon">🤖</span>
+                <div>
+                  <div class="comp-tool-name">ChatGPT Plus</div>
+                  <div class="comp-tool-desc">AI writing & scripts</div>
+                </div>
+              </div>
+              <div class="comp-price-col">
+                <span class="comp-price-mo">$20<span>/mo</span></span>
+                <span class="comp-price-yr">$240/yr</span>
+              </div>
+            </div>
+            <div class="comp-row">
+              <div class="comp-tool">
+                <span class="comp-icon">📅</span>
+                <div>
+                  <div class="comp-tool-name">Buffer Essentials</div>
+                  <div class="comp-tool-desc">Scheduling (5 channels)</div>
+                </div>
+              </div>
+              <div class="comp-price-col">
+                <span class="comp-price-mo">$30<span>/mo</span></span>
+                <span class="comp-price-yr">$360/yr</span>
+              </div>
+            </div>
+            <div class="comp-row">
+              <div class="comp-tool">
+                <span class="comp-icon">🎨</span>
+                <div>
+                  <div class="comp-tool-name">Canva Pro</div>
+                  <div class="comp-tool-desc">Design & thumbnails</div>
+                </div>
+              </div>
+              <div class="comp-price-col">
+                <span class="comp-price-mo">$15<span>/mo</span></span>
+                <span class="comp-price-yr">$180/yr</span>
+              </div>
+            </div>
+            <div class="comp-row">
+              <div class="comp-tool">
+                <span class="comp-icon">⚡</span>
+                <div>
+                  <div class="comp-tool-name">SuperGrok</div>
+                  <div class="comp-tool-desc">AI & real-time data</div>
+                </div>
+              </div>
+              <div class="comp-price-col">
+                <span class="comp-price-mo">$30<span>/mo</span></span>
+                <span class="comp-price-yr">$360/yr</span>
+              </div>
+            </div>
+          </div>
+          <div class="comp-total their-total">
+            <div class="comp-total-label">Total per year</div>
+            <div class="comp-total-amount their-amount">$1,379 / yr</div>
+            <div class="comp-total-sub">…and counting. Every. Single. Year.</div>
+          </div>
+        </div>
+
+        <!-- VS DIVIDER -->
+        <div class="comp-vs">
+          <div class="comp-vs-circle">VS</div>
+        </div>
+
+        <!-- OUR STACK -->
+        <div class="comp-col comp-ours">
+          <div class="comp-header">
+            <span class="comp-label-badge ours">✅ The smart way</span>
+            <h3 class="comp-title">Social Media Swiss Army Knife</h3>
+          </div>
+          <div class="comp-rows">
+            <div class="comp-row ours-row">
+              <div class="comp-tool">
+                <span class="comp-icon">✂️</span>
+                <div>
+                  <div class="comp-tool-name">Video Tools</div>
+                  <div class="comp-tool-desc">Lossless Cut, Viral Cutter, Speed Ramper + more</div>
+                </div>
+              </div>
+              <div class="comp-price-col"><span class="comp-included">✓ Included</span></div>
+            </div>
+            <div class="comp-row ours-row">
+              <div class="comp-tool">
+                <span class="comp-icon">🤖</span>
+                <div>
+                  <div class="comp-tool-name">Full AI Suite</div>
+                  <div class="comp-tool-desc">Script Writer, Hook Gen, Brand Voice + more</div>
+                </div>
+              </div>
+              <div class="comp-price-col"><span class="comp-included">✓ Included</span></div>
+            </div>
+            <div class="comp-row ours-row">
+              <div class="comp-tool">
+                <span class="comp-icon">📡</span>
+                <div>
+                  <div class="comp-tool-name">Direct Publisher</div>
+                  <div class="comp-tool-desc">TikTok, YouTube, Instagram, LinkedIn, X</div>
+                </div>
+              </div>
+              <div class="comp-price-col"><span class="comp-included">✓ Included</span></div>
+            </div>
+            <div class="comp-row ours-row">
+              <div class="comp-tool">
+                <span class="comp-icon">🖼️</span>
+                <div>
+                  <div class="comp-tool-name">Design Tools</div>
+                  <div class="comp-tool-desc">Thumbnail Maker, Background Remover + more</div>
+                </div>
+              </div>
+              <div class="comp-price-col"><span class="comp-included">✓ Included</span></div>
+            </div>
+            <div class="comp-row ours-row">
+              <div class="comp-tool">
+                <span class="comp-icon">📅</span>
+                <div>
+                  <div class="comp-tool-name">Planning & Analytics</div>
+                  <div class="comp-tool-desc">30-Day Calendar, Hashtag Research + more</div>
+                </div>
+              </div>
+              <div class="comp-price-col"><span class="comp-included">✓ Included</span></div>
+            </div>
+          </div>
+          <div class="comp-total ours-total">
+            <div class="comp-total-label">One-time price — forever</div>
+            <div class="comp-total-amount ours-amount">$39 <span class="ours-amount-note">once</span></div>
+            <div class="comp-total-sub">No renewals. No surprises. Ever.</div>
+            <a href="https://icecoldsteve.gumroad.com/l/fnfgvd" target="_blank" class="comp-cta">
+              <i class="fa-solid fa-cart-shopping"></i>
+              Get SMSAK for $39
+            </a>
+          </div>
+        </div>
       </div>
-      <div class="comp-rows">
-        <div class="comp-row">
-          <div class="comp-tool">
-            <span class="comp-icon">🎬</span>
-            <div>
-              <div class="comp-tool-name">CapCut Pro</div>
-              <div class="comp-tool-desc">Video editing</div>
-            </div>
+
+      <!-- SAVINGS CALLOUT -->
+      <div class="savings-callout reveal">
+        <div class="savings-inner">
+          <div class="savings-stat">
+            <div class="savings-number">$1,340</div>
+            <div class="savings-label">Saved in year 1</div>
           </div>
-          <div class="comp-price-col">
-            <span class="comp-price-mo">$19.99<span>/mo</span></span>
-            <span class="comp-price-yr">$239/yr</span>
+          <div class="savings-divider"></div>
+          <div class="savings-stat">
+            <div class="savings-number">$2,719</div>
+            <div class="savings-label">Saved over 2 years</div>
           </div>
-        </div>
-        <div class="comp-row">
-          <div class="comp-tool">
-            <span class="comp-icon">🤖</span>
-            <div>
-              <div class="comp-tool-name">ChatGPT Plus</div>
-              <div class="comp-tool-desc">AI writing & scripts</div>
-            </div>
-          </div>
-          <div class="comp-price-col">
-            <span class="comp-price-mo">$20<span>/mo</span></span>
-            <span class="comp-price-yr">$240/yr</span>
-          </div>
-        </div>
-        <div class="comp-row">
-          <div class="comp-tool">
-            <span class="comp-icon">📅</span>
-            <div>
-              <div class="comp-tool-name">Buffer Essentials</div>
-              <div class="comp-tool-desc">Scheduling (5 channels)</div>
-            </div>
-          </div>
-          <div class="comp-price-col">
-            <span class="comp-price-mo">$30<span>/mo</span></span>
-            <span class="comp-price-yr">$360/yr</span>
-          </div>
-        </div>
-        <div class="comp-row">
-          <div class="comp-tool">
-            <span class="comp-icon">🎨</span>
-            <div>
-              <div class="comp-tool-name">Canva Pro</div>
-              <div class="comp-tool-desc">Design & thumbnails</div>
-            </div>
-          </div>
-          <div class="comp-price-col">
-            <span class="comp-price-mo">$15<span>/mo</span></span>
-            <span class="comp-price-yr">$180/yr</span>
-          </div>
-        </div>
-        <div class="comp-row">
-          <div class="comp-tool">
-            <span class="comp-icon">⚡</span>
-            <div>
-              <div class="comp-tool-name">SuperGrok</div>
-              <div class="comp-tool-desc">AI & real-time data</div>
-            </div>
-          </div>
-          <div class="comp-price-col">
-            <span class="comp-price-mo">$30<span>/mo</span></span>
-            <span class="comp-price-yr">$360/yr</span>
+          <div class="savings-divider"></div>
+          <div class="savings-stat">
+            <div class="savings-number">35×</div>
+            <div class="savings-label">Cheaper than the alternative</div>
           </div>
         </div>
       </div>
-      <div class="comp-total their-total">
-        <div class="comp-total-label">Total per year</div>
-        <div class="comp-total-amount their-amount">$1,379 / yr</div>
-        <div class="comp-total-sub">…and counting. Every. Single. Year.</div>
-      </div>
+
     </div>
-
-    <!-- VS DIVIDER -->
-    <div class="comp-vs">
-      <div class="comp-vs-circle">VS</div>
-    </div>
-
-    <!-- OUR STACK -->
-    <div class="comp-col comp-ours">
-      <div class="comp-header">
-        <span class="comp-label-badge ours">✅ The smart way</span>
-        <h3 class="comp-title">Social Media Swiss Army Knife</h3>
-      </div>
-      <div class="comp-rows">
-        <div class="comp-row ours-row">
-          <div class="comp-tool">
-            <span class="comp-icon">✂️</span>
-            <div>
-              <div class="comp-tool-name">Video Tools</div>
-              <div class="comp-tool-desc">Lossless Cut, Viral Cutter, Speed Ramper + more</div>
-            </div>
-          </div>
-          <div class="comp-price-col"><span class="comp-included">✓ Included</span></div>
-        </div>
-        <div class="comp-row ours-row">
-          <div class="comp-tool">
-            <span class="comp-icon">🤖</span>
-            <div>
-              <div class="comp-tool-name">Full AI Suite</div>
-              <div class="comp-tool-desc">Script Writer, Hook Gen, Brand Voice + more</div>
-            </div>
-          </div>
-          <div class="comp-price-col"><span class="comp-included">✓ Included</span></div>
-        </div>
-        <div class="comp-row ours-row">
-          <div class="comp-tool">
-            <span class="comp-icon">📡</span>
-            <div>
-              <div class="comp-tool-name">Direct Publisher</div>
-              <div class="comp-tool-desc">TikTok, YouTube, Instagram, LinkedIn, X</div>
-            </div>
-          </div>
-          <div class="comp-price-col"><span class="comp-included">✓ Included</span></div>
-        </div>
-        <div class="comp-row ours-row">
-          <div class="comp-tool">
-            <span class="comp-icon">🖼️</span>
-            <div>
-              <div class="comp-tool-name">Design Tools</div>
-              <div class="comp-tool-desc">Thumbnail Maker, Background Remover + more</div>
-            </div>
-          </div>
-          <div class="comp-price-col"><span class="comp-included">✓ Included</span></div>
-        </div>
-        <div class="comp-row ours-row">
-          <div class="comp-tool">
-            <span class="comp-icon">📅</span>
-            <div>
-              <div class="comp-tool-name">Planning & Analytics</div>
-              <div class="comp-tool-desc">30-Day Calendar, Hashtag Research + more</div>
-            </div>
-          </div>
-          <div class="comp-price-col"><span class="comp-included">✓ Included</span></div>
-        </div>
-      </div>
-      <div class="comp-total ours-total">
-        <div class="comp-total-label">One-time price — forever</div>
-        <div class="comp-total-amount ours-amount">$39 <span class="ours-amount-note">once</span></div>
-        <div class="comp-total-sub">No renewals. No surprises. Ever.</div>
-        <a href="https://icecoldsteve.gumroad.com/l/fnfgvd" target="_blank" class="comp-cta">
-          <i class="fa-solid fa-cart-shopping"></i>
-          Get SMSAK for $39
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- SAVINGS CALLOUT -->
-  <div class="savings-callout reveal">
-    <div class="savings-inner">
-      <div class="savings-stat">
-        <div class="savings-number">$1,340</div>
-        <div class="savings-label">Saved in year 1</div>
-      </div>
-      <div class="savings-divider"></div>
-      <div class="savings-stat">
-        <div class="savings-number">$2,719</div>
-        <div class="savings-label">Saved over 2 years</div>
-      </div>
-      <div class="savings-divider"></div>
-      <div class="savings-stat">
-        <div class="savings-number">35×</div>
-        <div class="savings-label">Cheaper than the alternative</div>
-      </div>
-    </div>
-  </div>
-
-</div>
-```
-
   </section>
 
   <!-- TESTIMONIALS -->
-
   <section class="testimonials-section" id="testimonials">
     <div style="max-width:1100px;margin:0 auto;text-align:center;margin-bottom:3.5rem;">
       <span class="section-label">Real creators, real results</span>
@@ -1890,86 +1863,82 @@ footer {
     </div>
     <div class="testimonials-grid reveal">
 
-```
-  <div class="testimonial">
-    <div class="testimonial-stars">★★★★★</div>
-    <p class="testimonial-text">"I replaced 6 different subscriptions with this one app. The Viral Cutter alone saved me hours every week — it just knows what clips will perform."</p>
-    <div class="testimonial-author">
-      <div class="avatar" style="background:#7c3aed20;color:#a78bfa;">JL</div>
-      <div class="author-info">
-        <div class="author-name">Jake L.</div>
-        <div class="author-handle">@jakelcreates · 280K on TikTok</div>
+      <div class="testimonial">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"I replaced 6 different subscriptions with this one app. The Viral Cutter alone saved me hours every week — it just knows what clips will perform."</p>
+        <div class="testimonial-author">
+          <div class="avatar" style="background:#7c3aed20;color:#a78bfa;">JL</div>
+          <div class="author-info">
+            <div class="author-name">Jake L.</div>
+            <div class="author-handle">@jakelcreates · 280K on TikTok</div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <div class="testimonial">
-    <div class="testimonial-stars">★★★★★</div>
-    <p class="testimonial-text">"The Brand Voice Trainer is insane. Fed it my old posts and it completely nails my tone now. Every caption it writes sounds exactly like me."</p>
-    <div class="testimonial-author">
-      <div class="avatar" style="background:#22c55e20;color:#4ade80;">SM</div>
-      <div class="author-info">
-        <div class="author-name">Sofia M.</div>
-        <div class="author-handle">@sofiamakes · 95K on Instagram</div>
+      <div class="testimonial">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"The Brand Voice Trainer is insane. Fed it my old posts and it completely nails my tone now. Every caption it writes sounds exactly like me."</p>
+        <div class="testimonial-author">
+          <div class="avatar" style="background:#22c55e20;color:#4ade80;">SM</div>
+          <div class="author-info">
+            <div class="author-name">Sofia M.</div>
+            <div class="author-handle">@sofiamakes · 95K on Instagram</div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <div class="testimonial">
-    <div class="testimonial-stars">★★★★★</div>
-    <p class="testimonial-text">"Posting to 5 platforms used to take me 45 minutes. Now it's 5 minutes. The Direct Publisher + Cross-Post Scheduler combo is genuinely life-changing."</p>
-    <div class="testimonial-author">
-      <div class="avatar" style="background:#f59e0b20;color:#fbbf24;">DK</div>
-      <div class="author-info">
-        <div class="author-name">Dan K.</div>
-        <div class="author-handle">@dankproduces · 410K on YouTube</div>
+      <div class="testimonial">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Posting to 5 platforms used to take me 45 minutes. Now it's 5 minutes. The Direct Publisher + Cross-Post Scheduler combo is genuinely life-changing."</p>
+        <div class="testimonial-author">
+          <div class="avatar" style="background:#f59e0b20;color:#fbbf24;">DK</div>
+          <div class="author-info">
+            <div class="author-name">Dan K.</div>
+            <div class="author-handle">@dankproduces · 410K on YouTube</div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <div class="testimonial">
-    <div class="testimonial-stars">★★★★★</div>
-    <p class="testimonial-text">"One-time payment for something this powerful felt almost too good to be true. I kept waiting for a catch. There isn't one."</p>
-    <div class="testimonial-author">
-      <div class="avatar" style="background:#ec489920;color:#f472b6;">AT</div>
-      <div class="author-info">
-        <div class="author-name">Amy T.</div>
-        <div class="author-handle">@amytcontent · 52K on LinkedIn</div>
+      <div class="testimonial">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"One-time payment for something this powerful felt almost too good to be true. I kept waiting for a catch. There isn't one."</p>
+        <div class="testimonial-author">
+          <div class="avatar" style="background:#ec489920;color:#f472b6;">AT</div>
+          <div class="author-info">
+            <div class="author-name">Amy T.</div>
+            <div class="author-handle">@amytcontent · 52K on LinkedIn</div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <div class="testimonial">
-    <div class="testimonial-stars">★★★★★</div>
-    <p class="testimonial-text">"The 30-Day Content Calendar filled my whole next month in 2 minutes. I spent more time reading the output than it took to generate. Ridiculous value."</p>
-    <div class="testimonial-author">
-      <div class="avatar" style="background:#0ea5e920;color:#38bdf8;">MR</div>
-      <div class="author-info">
-        <div class="author-name">Marcus R.</div>
-        <div class="author-handle">@marcusr · 170K on X</div>
+      <div class="testimonial">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"The 30-Day Content Calendar filled my whole next month in 2 minutes. I spent more time reading the output than it took to generate. Ridiculous value."</p>
+        <div class="testimonial-author">
+          <div class="avatar" style="background:#0ea5e920;color:#38bdf8;">MR</div>
+          <div class="author-info">
+            <div class="author-name">Marcus R.</div>
+            <div class="author-handle">@marcusr · 170K on X</div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <div class="testimonial">
-    <div class="testimonial-stars">★★★★★</div>
-    <p class="testimonial-text">"Background Remover, Thumbnail Maker, Karaoke Subs — professional results without professional tools. My edit quality went up and my stress went way down."</p>
-    <div class="testimonial-author">
-      <div class="avatar" style="background:#84cc1620;color:#a3e635;">LP</div>
-      <div class="author-info">
-        <div class="author-name">Lena P.</div>
-        <div class="author-handle">@lenapcreative · 38K on Instagram</div>
+      <div class="testimonial">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Background Remover, Thumbnail Maker, Karaoke Subs — professional results without professional tools. My edit quality went up and my stress went way down."</p>
+        <div class="testimonial-author">
+          <div class="avatar" style="background:#84cc1620;color:#a3e635;">LP</div>
+          <div class="author-info">
+            <div class="author-name">Lena P.</div>
+            <div class="author-handle">@lenapcreative · 38K on Instagram</div>
+          </div>
+        </div>
       </div>
+
     </div>
-  </div>
-
-</div>
-```
-
   </section>
 
   <!-- CHANGELOG -->
-
   <section class="changelog-section">
     <div class="changelog-inner">
       <div style="text-align:center;margin-bottom:3.5rem;">
@@ -1979,95 +1948,91 @@ footer {
       </div>
       <div class="changelog-list reveal">
 
-```
-    <div class="changelog-entry">
-      <div class="changelog-meta">
-        <span class="changelog-version">v4.3.0</span>
-        <span class="changelog-date">Mar 2026</span>
-      </div>
-      <div class="changelog-content">
-        <h4>Trend Tracker & AI improvements</h4>
-        <div class="changelog-tags">
-          <span class="changelog-tag tag-new">New</span>
-          <span class="changelog-tag tag-improved">Improved</span>
+        <div class="changelog-entry">
+          <div class="changelog-meta">
+            <span class="changelog-version">v4.3.0</span>
+            <span class="changelog-date">Mar 2026</span>
+          </div>
+          <div class="changelog-content">
+            <h4>Trend Tracker & AI improvements</h4>
+            <div class="changelog-tags">
+              <span class="changelog-tag tag-new">New</span>
+              <span class="changelog-tag tag-improved">Improved</span>
+            </div>
+            <ul class="changelog-items">
+              <li>Added Trend Tracker — monitor viral topics across TikTok, X & YouTube in real time</li>
+              <li>Improved Caption Adapter with multi-platform tone switching</li>
+              <li>Hook Generator now supports 12 hook formats including question, shock & story hooks</li>
+              <li>Added SuperGrok & OpenAI API key support in settings panel</li>
+            </ul>
+          </div>
         </div>
-        <ul class="changelog-items">
-          <li>Added Trend Tracker — monitor viral topics across TikTok, X & YouTube in real time</li>
-          <li>Improved Caption Adapter with multi-platform tone switching</li>
-          <li>Hook Generator now supports 12 hook formats including question, shock & story hooks</li>
-          <li>Added SuperGrok & OpenAI API key support in settings panel</li>
-        </ul>
+
+        <div class="changelog-entry">
+          <div class="changelog-meta">
+            <span class="changelog-version">v4.2.0</span>
+            <span class="changelog-date">Feb 2026</span>
+          </div>
+          <div class="changelog-content">
+            <h4>Cross-Post Scheduler & Publisher overhaul</h4>
+            <div class="changelog-tags">
+              <span class="changelog-tag tag-new">New</span>
+              <span class="changelog-tag tag-improved">Improved</span>
+              <span class="changelog-tag tag-fix">Fix</span>
+            </div>
+            <ul class="changelog-items">
+              <li>Cross-Post Scheduler now supports queuing up to 90 days in advance</li>
+              <li>Direct Publisher: added LinkedIn newsletter and YouTube Shorts support</li>
+              <li>Fixed intermittent TikTok upload timeout on large video files</li>
+              <li>Auto-Transcriber accuracy improved by 18% with new Whisper model</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="changelog-entry">
+          <div class="changelog-meta">
+            <span class="changelog-version">v4.1.0</span>
+            <span class="changelog-date">Jan 2026</span>
+          </div>
+          <div class="changelog-content">
+            <h4>Design tools & performance</h4>
+            <div class="changelog-tags">
+              <span class="changelog-tag tag-new">New</span>
+              <span class="changelog-tag tag-improved">Improved</span>
+            </div>
+            <ul class="changelog-items">
+              <li>Added A/B Caption Tester — compare two captions and predict which performs better</li>
+              <li>Thumbnail Maker upgraded with 40 new templates and drag-and-drop editor</li>
+              <li>Background Remover now processes 4K images in under 3 seconds</li>
+              <li>Overall app startup time reduced by 35% on both Windows and macOS</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="changelog-entry">
+          <div class="changelog-meta">
+            <span class="changelog-version">v4.0.0</span>
+            <span class="changelog-date">Dec 2025</span>
+          </div>
+          <div class="changelog-content">
+            <h4>Major release — 30 tools milestone</h4>
+            <div class="changelog-tags">
+              <span class="changelog-tag tag-new">New</span>
+            </div>
+            <ul class="changelog-items">
+              <li>Reached 30 tools milestone — added Bio Optimizer, DM Template Builder & Story Maker</li>
+              <li>Complete UI redesign with new dark theme and improved navigation</li>
+              <li>Brand Voice Trainer v2 — now learns from up to 50 past posts</li>
+              <li>30-Day Content Calendar now exports directly to Google Calendar</li>
+            </ul>
+          </div>
+        </div>
+
       </div>
     </div>
-
-    <div class="changelog-entry">
-      <div class="changelog-meta">
-        <span class="changelog-version">v4.2.0</span>
-        <span class="changelog-date">Feb 2026</span>
-      </div>
-      <div class="changelog-content">
-        <h4>Cross-Post Scheduler & Publisher overhaul</h4>
-        <div class="changelog-tags">
-          <span class="changelog-tag tag-new">New</span>
-          <span class="changelog-tag tag-improved">Improved</span>
-          <span class="changelog-tag tag-fix">Fix</span>
-        </div>
-        <ul class="changelog-items">
-          <li>Cross-Post Scheduler now supports queuing up to 90 days in advance</li>
-          <li>Direct Publisher: added LinkedIn newsletter and YouTube Shorts support</li>
-          <li>Fixed intermittent TikTok upload timeout on large video files</li>
-          <li>Auto-Transcriber accuracy improved by 18% with new Whisper model</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="changelog-entry">
-      <div class="changelog-meta">
-        <span class="changelog-version">v4.1.0</span>
-        <span class="changelog-date">Jan 2026</span>
-      </div>
-      <div class="changelog-content">
-        <h4>Design tools & performance</h4>
-        <div class="changelog-tags">
-          <span class="changelog-tag tag-new">New</span>
-          <span class="changelog-tag tag-improved">Improved</span>
-        </div>
-        <ul class="changelog-items">
-          <li>Added A/B Caption Tester — compare two captions and predict which performs better</li>
-          <li>Thumbnail Maker upgraded with 40 new templates and drag-and-drop editor</li>
-          <li>Background Remover now processes 4K images in under 3 seconds</li>
-          <li>Overall app startup time reduced by 35% on both Windows and macOS</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="changelog-entry">
-      <div class="changelog-meta">
-        <span class="changelog-version">v4.0.0</span>
-        <span class="changelog-date">Dec 2025</span>
-      </div>
-      <div class="changelog-content">
-        <h4>Major release — 30 tools milestone</h4>
-        <div class="changelog-tags">
-          <span class="changelog-tag tag-new">New</span>
-        </div>
-        <ul class="changelog-items">
-          <li>Reached 30 tools milestone — added Bio Optimizer, DM Template Builder & Story Maker</li>
-          <li>Complete UI redesign with new dark theme and improved navigation</li>
-          <li>Brand Voice Trainer v2 — now learns from up to 50 past posts</li>
-          <li>30-Day Content Calendar now exports directly to Google Calendar</li>
-        </ul>
-      </div>
-    </div>
-
-  </div>
-</div>
-```
-
   </section>
 
   <!-- FAQ -->
-
   <section class="faq-section" id="faq">
     <div style="max-width:720px;margin:0 auto;text-align:center;margin-bottom:3.5rem;">
       <span class="section-label">FAQ</span>
@@ -2101,101 +2066,93 @@ footer {
         </div>
       </div>
 
-```
-<div class="faq-list reveal">
+    <div class="faq-list reveal">
 
-  <div class="faq-item">
-    <button class="faq-q" onclick="toggleFaq(this)">
-      Is this really a one-time payment?
-      <i class="fa-solid fa-chevron-down chevron"></i>
-    </button>
-    <div class="faq-a">Yes, 100%. You pay once and own it forever. No subscriptions, no renewal fees, no "free tier" restrictions. You get full access to all 30 tools immediately after purchase.</div>
-  </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Is this really a one-time payment?
+          <i class="fa-solid fa-chevron-down chevron"></i>
+        </button>
+        <div class="faq-a">Yes, 100%. You pay once and own it forever. No subscriptions, no renewal fees, no "free tier" restrictions. You get full access to all 30 tools immediately after purchase.</div>
+      </div>
 
-  <div class="faq-item">
-    <button class="faq-q" onclick="toggleFaq(this)">
-      What operating systems are supported?
-      <i class="fa-solid fa-chevron-down chevron"></i>
-    </button>
-    <div class="faq-a">SMSAK is a native desktop app available for both Windows and macOS. Windows 10/11 and macOS 12+ (Monterey and above) are supported. A web version is not currently planned.</div>
-  </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          What operating systems are supported?
+          <i class="fa-solid fa-chevron-down chevron"></i>
+        </button>
+        <div class="faq-a">SMSAK is a native desktop app available for both Windows and macOS. Windows 10/11 and macOS 12+ (Monterey and above) are supported. A web version is not currently planned.</div>
+      </div>
 
-  <div class="faq-item">
-    <button class="faq-q" onclick="toggleFaq(this)">
-      Do the AI tools require an API key?
-      <i class="fa-solid fa-chevron-down chevron"></i>
-    </button>
-    <div class="faq-a">Yes, you need your own OpenAI and Grok API keys. You can buy credits directly from OpenAI and Grok without middlemen.</div>
-  </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Do the AI tools require an API key?
+          <i class="fa-solid fa-chevron-down chevron"></i>
+        </button>
+        <div class="faq-a">Yes, you need your own OpenAI and Grok API keys. You can buy credits directly from OpenAI and Grok without middlemen.</div>
+      </div>
 
-  <div class="faq-item">
-    <button class="faq-q" onclick="toggleFaq(this)">
-      How does the Direct Publisher work?
-      <i class="fa-solid fa-chevron-down chevron"></i>
-    </button>
-    <div class="faq-a">You can add your API keys from TikTok, YouTube, Instagram, LinkedIn, and X directly in the app.</div>
-  </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          How does the Direct Publisher work?
+          <i class="fa-solid fa-chevron-down chevron"></i>
+        </button>
+        <div class="faq-a">You can add your API keys from TikTok, YouTube, Instagram, LinkedIn, and X directly in the app.</div>
+      </div>
 
-  <div class="faq-item">
-    <button class="faq-q" onclick="toggleFaq(this)">
-      What does "free updates forever" mean?
-      <i class="fa-solid fa-chevron-down chevron"></i>
-    </button>
-    <div class="faq-a">Every future version of SMSAK — including new tools, UI improvements, bug fixes, and platform updates — is free for all customers. No paid upgrade tier, ever. Buy once, benefit forever.</div>
-  </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          What does "free updates forever" mean?
+          <i class="fa-solid fa-chevron-down chevron"></i>
+        </button>
+        <div class="faq-a">Every future version of SMSAK — including new tools, UI improvements, bug fixes, and platform updates — is free for all customers. No paid upgrade tier, ever. Buy once, benefit forever.</div>
+      </div>
 
-  <div class="faq-item">
-    <button class="faq-q" onclick="toggleFaq(this)">
-      Is there a refund policy?
-      <i class="fa-solid fa-chevron-down chevron"></i>
-    </button>
-    <div class="faq-a">Sorry. We can offer NO refunds! We are a small independent indie dev with no team behind us that can handle refunds and spend hours replying to emails. I hope you understand.</div>
-  </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Is there a refund policy?
+          <i class="fa-solid fa-chevron-down chevron"></i>
+        </button>
+        <div class="faq-a">Sorry. We can offer NO refunds! We are a small independent indie dev with no team behind us that can handle refunds and spend hours replying to emails. I hope you understand.</div>
+      </div>
 
-</div>
-```
-
+    </div>
   </section>
 
   <!-- FINAL CTA -->
-
   <section class="final-cta">
     <div class="final-cta-inner reveal">
       <h2>Stop paying monthly for social media tools.<br>Start creating more.</h2>
       <p>Join 10,000+ creators who replaced their whole stack with one app.</p>
 
-```
-  <!-- COUNTDOWN -->
-  <div class="countdown-wrap dark" style="margin-bottom:2rem;">
-    <span class="countdown-label">⏳ Offer ends in</span>
-    <div class="countdown-units">
-      <div class="countdown-unit"><span class="countdown-num" id="f-days">07</span><span class="countdown-unit-label">Days</span></div>
-      <span class="countdown-sep">:</span>
-      <div class="countdown-unit"><span class="countdown-num" id="f-hours">00</span><span class="countdown-unit-label">Hours</span></div>
-      <span class="countdown-sep">:</span>
-      <div class="countdown-unit"><span class="countdown-num" id="f-mins">00</span><span class="countdown-unit-label">Mins</span></div>
-      <span class="countdown-sep">:</span>
-      <div class="countdown-unit"><span class="countdown-num" id="f-secs">00</span><span class="countdown-unit-label">Secs</span></div>
+      <!-- COUNTDOWN -->
+      <div class="countdown-wrap dark" style="margin-bottom:2rem;">
+        <span class="countdown-label">⏳ Offer ends in</span>
+        <div class="countdown-units">
+          <div class="countdown-unit"><span class="countdown-num" id="f-days">07</span><span class="countdown-unit-label">Days</span></div>
+          <span class="countdown-sep">:</span>
+          <div class="countdown-unit"><span class="countdown-num" id="f-hours">00</span><span class="countdown-unit-label">Hours</span></div>
+          <span class="countdown-sep">:</span>
+          <div class="countdown-unit"><span class="countdown-num" id="f-mins">00</span><span class="countdown-unit-label">Mins</span></div>
+          <span class="countdown-sep">:</span>
+          <div class="countdown-unit"><span class="countdown-num" id="f-secs">00</span><span class="countdown-unit-label">Secs</span></div>
+        </div>
+      </div>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="https://icecoldsteve.gumroad.com/l/fnfgvd" target="_blank" class="btn-primary">
+          <i class="fa-solid fa-cart-shopping"></i>
+          Get SMSAK — $39 with code WEB1000
+        </a>
+      </div>
+      <div class="platform-badges" style="margin-top:1.5rem;">
+        <span class="platform-badge"><i class="fa-brands fa-windows"></i> Windows</span>
+        <span class="platform-badge"><i class="fa-brands fa-apple"></i> macOS</span>
+      </div>
+      <p style="font-size:0.78rem;color:var(--muted);margin-top:1.5rem;">One-time purchase • Free updates forever</p>
     </div>
-  </div>
-  <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-    <a href="https://icecoldsteve.gumroad.com/l/fnfgvd" target="_blank" class="btn-primary">
-      <i class="fa-solid fa-cart-shopping"></i>
-      Get SMSAK — $39 with code WEB1000
-    </a>
-  </div>
-  <div class="platform-badges" style="margin-top:1.5rem;">
-    <span class="platform-badge"><i class="fa-brands fa-windows"></i> Windows</span>
-    <span class="platform-badge"><i class="fa-brands fa-apple"></i> macOS</span>
-  </div>
-  <p style="font-size:0.78rem;color:var(--muted);margin-top:1.5rem;">One-time purchase • Free updates forever</p>
-</div>
-```
-
   </section>
 
   <!-- EMAIL CAPTURE -->
-
   <section class="email-section">
     <div class="email-inner reveal">
       <span class="section-label">Stay in the loop</span>
@@ -2223,7 +2180,6 @@ footer {
   </section>
 
   <!-- FOOTER -->
-
   <footer>
     <span>© 2026 IcecoldAI</span>
     <span>Social Media Swiss Army Knife v4.3.0</span>
@@ -2231,7 +2187,6 @@ footer {
   </footer>
 
   <!-- SCROLL TO TOP -->
-
   <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
     <i class="fa-solid fa-chevron-up"></i>
   </button>
@@ -2364,13 +2319,16 @@ footer {
       }, 7000);
     })();
 
-    // ── EMAIL CAPTURE ──
-    function submitEmail() {
+    // ── EMAIL CAPTURE (Formspree) ──
+    async function submitEmail() {
       const input   = document.getElementById('emailInput');
       const form    = document.getElementById('emailForm');
       const success = document.getElementById('emailSuccess');
+      const btn     = form ? form.querySelector('.email-submit') : null;
       const val = input ? input.value.trim() : '';
-      if (!val || !val.includes('@')) {
+
+      // Basic validation
+      if (!val || !val.includes('@') || !val.includes('.')) {
         if (input) {
           input.style.borderColor = '#f87171';
           input.focus();
@@ -2378,15 +2336,37 @@ footer {
         }
         return;
       }
-      if (form)    form.style.display    = 'none';
-      if (success) success.style.display = 'flex';
+
+      // Show loading state
+      if (btn) { btn.disabled = true; btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending…'; }
+
+      try {
+        const res = await fetch('https://formspree.io/f/mlgpjbpq', {
+          method: 'POST',
+          headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: val })
+        });
+
+        if (res.ok) {
+          if (form)    form.style.display    = 'none';
+          if (success) success.style.display = 'flex';
+        } else {
+          throw new Error('Server error');
+        }
+      } catch (err) {
+        // Reset button and show inline error
+        if (btn) { btn.disabled = false; btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Notify Me'; }
+        if (input) {
+          input.style.borderColor = '#f87171';
+          input.placeholder = 'Something went wrong — try again';
+          setTimeout(() => { input.style.borderColor = ''; input.placeholder = 'your@email.com'; }, 3000);
+        }
+      }
     }
 
     // Allow Enter key to submit email
-    document.addEventListener('DOMContentLoaded', () => {
-      const input = document.getElementById('emailInput');
-      if (input) input.addEventListener('keydown', e => { if (e.key === 'Enter') submitEmail(); });
-    });
+    const emailInput = document.getElementById('emailInput');
+    if (emailInput) emailInput.addEventListener('keydown', e => { if (e.key === 'Enter') submitEmail(); });
 
     // Scroll reveal
     const observer = new IntersectionObserver((entries) => {
