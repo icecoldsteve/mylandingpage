@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy & Terms of Service — SMSAK</title>
+  <meta name="description" content="Privacy Policy and Terms of Service for Social Media Swiss Army Knife (SMSAK) by IcecoldAI." />
+  <meta name="robots" content="noindex" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5WTKVHWWMR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-5WTKVHWWMR');
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0d0d0f;
+      --surface: #141416;
+      --surface2: #1c1c1f;
+      --border: rgba(255,255,255,0.07);
+      --text: #f0f0f2;
+      --muted: #6b6b78;
+      --accent: #7c3aed;
+      --accent2: #a78bfa;
+      --green: #22c55e;
+      --radius: 12px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 40% at 80% 10%, rgba(124,58,237,0.08) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 30% at 10% 80%, rgba(167,139,250,0.05) 0%, transparent 60%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(13,13,15,0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+    }
+
+    .nav-logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: var(--text);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .nav-logo span {
+      color: var(--accent2);
+    }
+
+    .nav-back {
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: color 0.2s;
+    }
+
+    .nav-back:hover { color: var(--text); }
+
+    /* ── LAYOUT ── */
+    main {
+      position: relative;
+      z-index: 1;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 4rem 2rem 6rem;
+    }
+
+    /* ── PAGE HEADER ── */
+    .page-header {
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .page-header .eyebrow {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent2);
+      margin-bottom: 0.75rem;
+    }
+
+    .page-header h1 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(1.8rem, 5vw, 2.6rem);
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+
+    .page-header .meta {
+      font-size: 0.875rem;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .page-header .meta span {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    /* ── TOC ── */
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem 1.75rem;
+      margin-bottom: 3rem;
+    }
+
+    .toc-title {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 0.875rem;
+    }
+
+    .toc ol {
+      list-style: none;
+      counter-reset: toc;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.3rem 2rem;
+    }
+
+    .toc li {
+      counter-increment: toc;
+      display: flex;
+      align-items: baseline;
+      gap: 0.5rem;
+    }
+
+    .toc li::before {
+      content: counter(toc, decimal-leading-zero);
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--accent2);
+      flex-shrink: 0;
+    }
+
+    .toc a {
+      font-size: 0.875rem;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .toc a:hover { color: var(--text); }
+
+    @media (max-width: 540px) {
+      .toc ol { grid-template-columns: 1fr; }
+    }
+
+    /* ── SECTION ── */
+    .section {
+      margin-bottom: 3rem;
+      scroll-margin-top: 80px;
+    }
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent2);
+      margin-bottom: 0.5rem;
+    }
+
+    .section h2 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 1.3rem;
+      margin-bottom: 1.25rem;
+      color: var(--text);
+    }
+
+    .section p {
+      color: #c0c0cc;
+      margin-bottom: 0.875rem;
+    }
+
+    .section p:last-child { margin-bottom: 0; }
+
+    .section ul, .section ol {
+      padding-left: 1.5rem;
+      color: #c0c0cc;
+      margin-bottom: 0.875rem;
+    }
+
+    .section ul li, .section ol li {
+      margin-bottom: 0.4rem;
+    }
+
+    .section a {
+      color: var(--accent2);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(167,139,250,0.3);
+      transition: border-color 0.2s;
+    }
+
+    .section a:hover { border-color: var(--accent2); }
+
+    .section strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    /* ── DIVIDER ── */
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin: 3rem 0;
+    }
+
+    .section-tag {
+      display: inline-block;
+      background: rgba(124,58,237,0.15);
+      border: 1px solid rgba(124,58,237,0.3);
+      color: var(--accent2);
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 0.75rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      margin-bottom: 1.5rem;
+    }
+
+    /* ── CALLOUT ── */
+    .callout {
+      background: var(--surface2);
+      border-left: 3px solid var(--accent2);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 1rem 1.25rem;
+      margin: 1.25rem 0;
+      color: #c0c0cc;
+      font-size: 0.9rem;
+    }
+
+    .callout.warn {
+      border-left-color: #f59e0b;
+    }
+
+    .callout.green {
+      border-left-color: var(--green);
+    }
+
+    .callout strong {
+      color: var(--text);
+      display: block;
+      margin-bottom: 0.25rem;
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+    }
+
+    /* ── CONTACT CARD ── */
+    .contact-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      margin-top: 1.5rem;
+    }
+
+    .contact-icon {
+      width: 44px;
+      height: 44px;
+      background: rgba(124,58,237,0.2);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .contact-card p {
+      margin: 0;
+      font-size: 0.875rem;
+      color: var(--muted);
+    }
+
+    .contact-card a {
+      font-weight: 500;
+      font-size: 0.95rem;
+      color: var(--accent2) !important;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    footer a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    footer a:hover { color: var(--text); }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="/" class="nav-logo">⚡ <span>SMSAK</span></a>
+    <a href="/" class="nav-back">← Back to home</a>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main>
+
+    <div class="page-header">
+      <div class="eyebrow">Legal</div>
+      <h1>Privacy Policy &amp;<br>Terms of Service</h1>
+      <div class="meta">
+        <span>📅 Effective: March 2026</span>
+        <span>🏢 IcecoldAI · Brussels, BE</span>
+        <span>🌐 swissarmy.app</span>
+      </div>
+    </div>
+
+    <!-- TOC -->
+    <nav class="toc" aria-label="Table of contents">
+      <div class="toc-title">Contents</div>
+      <ol>
+        <li><a href="#who-we-are">Who We Are</a></li>
+        <li><a href="#data-collected">Data We Collect</a></li>
+        <li><a href="#how-we-use">How We Use It</a></li>
+        <li><a href="#third-parties">Third-Party Services</a></li>
+        <li><a href="#cookies">Cookies</a></li>
+        <li><a href="#your-rights">Your Rights</a></li>
+        <li><a href="#purchases">Purchases &amp; Refunds</a></li>
+        <li><a href="#software-license">Software License</a></li>
+        <li><a href="#api-keys">API Keys &amp; Third-Party APIs</a></li>
+        <li><a href="#disclaimer">Disclaimers</a></li>
+        <li><a href="#changes">Policy Changes</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ol>
+    </nav>
+
+    <!-- PRIVACY -->
+    <div class="section-tag">Privacy Policy</div>
+
+    <div class="section" id="who-we-are">
+      <span class="section-label">01</span>
+      <h2>Who We Are</h2>
+      <p>SMSAK (Social Media Swiss Army Knife) is a desktop application developed and sold by <strong>IcecoldAI</strong>, an independent software developer based in Brussels, Belgium. This website is operated at <strong>swissarmy.app</strong>.</p>
+      <p>We take your privacy seriously. This policy explains what data we collect, why, and how it's handled — in plain language.</p>
+    </div>
+
+    <div class="section" id="data-collected">
+      <span class="section-label">02</span>
+      <h2>Data We Collect</h2>
+      <p>We collect only what we actually need:</p>
+      <ul>
+        <li><strong>Email address</strong> — if you voluntarily submit it via the newsletter/waitlist form on this website.</li>
+        <li><strong>Purchase information</strong> — handled entirely by Gumroad (see Third-Party Services). We receive only order confirmation notifications; we do not store your payment details.</li>
+        <li><strong>Basic analytics</strong> — if analytics are enabled, we may collect anonymised page-view data (no personal identifiers).</li>
+      </ul>
+      <div class="callout green">
+        <strong>The SMSAK desktop app itself collects no data.</strong>
+        It runs entirely on your local machine. Your API keys, content, and social media credentials never leave your device or pass through our servers.
+      </div>
+    </div>
+
+    <div class="section" id="how-we-use">
+      <span class="section-label">03</span>
+      <h2>How We Use Your Data</h2>
+      <p>If you submit your email address, we use it solely to:</p>
+      <ul>
+        <li>Send product updates, version release notes, and occasional tips for SMSAK users.</li>
+        <li>Notify you of major announcements (new tools, pricing changes, etc.).</li>
+      </ul>
+      <p>We will <strong>never</strong> sell, rent, or share your email with any third party for marketing purposes. You can unsubscribe at any time via the link in any email we send.</p>
+    </div>
+
+    <div class="section" id="third-parties">
+      <span class="section-label">04</span>
+      <h2>Third-Party Services</h2>
+      <p>This website and product interact with the following third-party services:</p>
+      <ul>
+        <li><strong>Gumroad</strong> — our payment and product delivery platform. Purchases are subject to <a href="https://gumroad.com/privacy" target="_blank" rel="noopener">Gumroad's Privacy Policy</a>.</li>
+        <li><strong>Formspree</strong> — processes email form submissions on this website. Submitted email addresses are stored by Formspree per their <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a>.</li>
+        <li><strong>Google Fonts</strong> — fonts are loaded from Google's CDN, which may log your IP address per <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</li>
+        <li><strong>OpenAI / xAI (Grok)</strong> — certain SMSAK tools use these APIs. Your API key and prompts are sent directly from your device to OpenAI/xAI. IcecoldAI has no visibility into this data.</li>
+      </ul>
+    </div>
+
+    <div class="section" id="cookies">
+      <span class="section-label">05</span>
+      <h2>Cookies &amp; Local Storage</h2>
+      <p>This website uses <strong>browser localStorage</strong> (not traditional cookies) for:</p>
+      <ul>
+        <li>Remembering your light/dark theme preference.</li>
+        <li>Storing the countdown timer start date for the discount offer.</li>
+      </ul>
+      <p>No tracking pixels, session identifiers, or cross-site cookies are set. If analytics are added in future, this policy will be updated before they are deployed.</p>
+    </div>
+
+    <div class="section" id="your-rights">
+      <span class="section-label">06</span>
+      <h2>Your Rights (GDPR &amp; Applicable Law)</h2>
+      <p>If you are in the European Union or European Economic Area, you have the following rights under GDPR:</p>
+      <ul>
+        <li><strong>Right of access</strong> — request a copy of the personal data we hold about you.</li>
+        <li><strong>Right to erasure</strong> — ask us to delete your email address from our list at any time.</li>
+        <li><strong>Right to rectification</strong> — ask us to correct inaccurate data.</li>
+        <li><strong>Right to object</strong> — opt out of any processing at any time.</li>
+        <li><strong>Right to portability</strong> — receive your data in a machine-readable format.</li>
+      </ul>
+      <p>To exercise any of these rights, contact us at the address below. We will respond within 30 days.</p>
+      <div class="callout">
+        <strong>Legal basis for processing (GDPR Art. 6)</strong>
+        Email addresses collected via the newsletter form are processed on the basis of your explicit consent (Art. 6(1)(a)). You may withdraw consent at any time by unsubscribing or emailing us.
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- TERMS -->
+    <div class="section-tag">Terms of Service</div>
+
+    <div class="section" id="purchases">
+      <span class="section-label">07</span>
+      <h2>Purchases &amp; Refund Policy</h2>
+      <p>SMSAK is sold as a <strong>one-time purchase</strong> through Gumroad at <strong>$89 USD</strong> (discounts may apply via promotional codes). All prices are listed in USD.</p>
+      <div class="callout warn">
+        <strong>No Refund Policy</strong>
+        Due to the digital and immediately-downloadable nature of the product, all sales are final. We do not offer refunds. Please review the feature list, screenshots, and FAQ carefully before purchasing. If you have pre-purchase questions, contact us first — we're happy to help.
+      </div>
+      <p>Promotional discount codes (e.g. <strong>WEB50</strong>) are time-limited, single-use per customer, and cannot be applied retroactively after a completed purchase.</p>
+    </div>
+
+    <div class="section" id="software-license">
+      <span class="section-label">08</span>
+      <h2>Software License</h2>
+      <p>Upon purchase, you receive a <strong>personal, non-exclusive, non-transferable license</strong> to install and use SMSAK on your own devices.</p>
+      <ul>
+        <li>You may install SMSAK on up to <strong>2 personal devices</strong> per license.</li>
+        <li>You may <strong>not</strong> resell, redistribute, sublicense, reverse-engineer, or decompile the software.</li>
+        <li>You may <strong>not</strong> share your download link or license with others.</li>
+        <li>Future version updates are included with your purchase at no additional cost.</li>
+      </ul>
+      <p>IcecoldAI retains all intellectual property rights in the software. This license does not transfer any ownership.</p>
+    </div>
+
+    <div class="section" id="api-keys">
+      <span class="section-label">09</span>
+      <h2>API Keys &amp; Third-Party Services</h2>
+      <p>Some tools within SMSAK require you to provide your own API keys (OpenAI, xAI/Grok). By using these features you agree that:</p>
+      <ul>
+        <li>You are solely responsible for obtaining, securing, and paying for your own API keys.</li>
+        <li>API usage costs are billed directly by OpenAI/xAI to your account — these costs are entirely separate from your SMSAK purchase.</li>
+        <li>IcecoldAI is not affiliated with, endorsed by, or liable for OpenAI or xAI.</li>
+        <li>Your API keys are stored locally on your device and are never transmitted to IcecoldAI's servers.</li>
+      </ul>
+    </div>
+
+    <div class="section" id="disclaimer">
+      <span class="section-label">10</span>
+      <h2>Disclaimers &amp; Limitation of Liability</h2>
+      <p>SMSAK is provided <strong>"as is"</strong> without warranties of any kind, express or implied. IcecoldAI does not warrant that the software will be error-free, uninterrupted, or that AI-generated outputs will be accurate or suitable for any particular purpose.</p>
+      <p>To the fullest extent permitted by law, IcecoldAI's total liability for any claim arising from your use of SMSAK shall not exceed the amount you paid for the software.</p>
+      <p>IcecoldAI is not responsible for: content generated via third-party AI APIs; changes to third-party platform APIs (TikTok, Instagram, YouTube, etc.) that may affect functionality; or account actions taken by social platforms against your accounts.</p>
+    </div>
+
+    <div class="section" id="changes">
+      <span class="section-label">11</span>
+      <h2>Policy Changes</h2>
+      <p>We may update this Privacy Policy and Terms of Service from time to time. Changes will be posted on this page with an updated effective date. If you have subscribed to our email list, we will notify you of material changes.</p>
+      <p>Continued use of SMSAK or this website after changes are posted constitutes your acceptance of the updated terms.</p>
+    </div>
+
+    <div class="section" id="contact">
+      <span class="section-label">12</span>
+      <h2>Contact</h2>
+      <p>For privacy requests, legal questions, or pre-purchase support, reach out to:</p>
+      <div class="contact-card">
+        <div class="contact-icon">✉️</div>
+        <div>
+          <a href="mailto:hello@swissarmy.app">hello@swissarmy.app</a>
+          <p>IcecoldAI · Brussels, Belgium<br>We aim to respond within 2 business days.</p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>© 2026 IcecoldAI · <a href="/">swissarmy.app</a> · <a href="/privacy.html">Privacy &amp; Terms</a></p>
+  </footer>
+
+</body>
+</html>
