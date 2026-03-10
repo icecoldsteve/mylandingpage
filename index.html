@@ -709,18 +709,24 @@
       display: grid;
       grid-template-columns: 1fr auto 1fr;
       gap: 0;
-      align-items: start;
+      align-items: stretch;
       border-radius: 1.5rem;
       overflow: hidden;
       border: 1px solid var(--border);
     }
 
     .comp-col { padding: 2.5rem; }
-    .comp-theirs { background: var(--surface); }
+    .comp-theirs {
+      background: var(--surface);
+      display: flex;
+      flex-direction: column;
+    }
     .comp-ours {
       background: linear-gradient(160deg, #1a103a 0%, #150d30 100%);
       border-left: 1px solid rgba(124,58,237,0.3);
       position: relative;
+      display: flex;
+      flex-direction: column;
     }
     .comp-ours::before {
       content: '';
@@ -854,25 +860,27 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 0 0.5rem;
+      padding: 0 0.75rem;
       background: var(--bg);
       position: relative;
     }
     .comp-vs-circle {
-      width: 48px;
-      height: 48px;
+      width: 64px;
+      height: 64px;
       border-radius: 50%;
-      background: var(--surface2);
-      border: 1px solid var(--border);
+      background: linear-gradient(135deg, var(--surface2), var(--surface));
+      border: 2px solid rgba(124,58,237,0.4);
+      box-shadow: 0 0 20px rgba(124,58,237,0.2);
       display: flex;
       align-items: center;
       justify-content: center;
       font-family: 'Syne', sans-serif;
-      font-size: 0.8rem;
+      font-size: 1rem;
       font-weight: 800;
-      color: var(--muted);
+      color: var(--accent2);
       position: sticky;
       top: 50%;
+      letter-spacing: 0.05em;
     }
 
     /* savings callout */
@@ -892,10 +900,12 @@
     }
     .savings-stat { text-align: center; }
     .savings-number {
-      font-family: 'Syne', sans-serif;
+      font-family: 'DM Mono', monospace;
       font-size: 2.2rem;
-      font-weight: 800;
+      font-weight: 500;
       color: var(--accent2);
+      font-variant-numeric: tabular-nums;
+      letter-spacing: -0.02em;
     }
     .savings-label { font-size: 0.8rem; color: var(--muted); margin-top: 0.2rem; }
     .savings-divider {
@@ -1583,19 +1593,19 @@
         <div class="how-num">1</div>
         <div class="how-step-icon">⬇️</div>
         <h3>Download & Install</h3>
-        <p>Buy once on Gumroad, download the installer for Windows or macOS and launch the app.</p>
+        <p>Buy on Gumroad, download and launch. Windows & macOS.</p>
       </div>
       <div class="how-step">
         <div class="how-num">2</div>
         <div class="how-step-icon">🔑</div>
-        <h3>Connect Your Accounts & API Keys</h3>
-        <p>Add your OpenAI & Grok API keys for AI tools. Connect your social accounts (TikTok, YouTube, Instagram, LinkedIn, X) to enable direct publishing.</p>
+        <h3>Connect & Configure</h3>
+        <p>Add your OpenAI & Grok API keys. Connect TikTok, YouTube, Instagram, LinkedIn and X for direct publishing.</p>
       </div>
       <div class="how-step">
         <div class="how-num">3</div>
         <div class="how-step-icon">🚀</div>
         <h3>Start Creating</h3>
-        <p>All 35 tools are immediately available. Edit videos, generate scripts, schedule posts, research hashtags — everything from one clean dashboard.</p>
+        <p>All 35 tools ready instantly — video editing, AI scripts, scheduling, hashtags. One dashboard.</p>
       </div>
     </div>
   </section>
@@ -1837,11 +1847,11 @@
           </div>
           <div class="comp-total ours-total">
             <div class="comp-total-label">One-time price — forever</div>
-            <div class="comp-total-amount ours-amount">$39 <span class="ours-amount-note">once</span></div>
+            <div class="comp-total-amount ours-amount">$89 <span class="ours-amount-note">once</span></div>
             <div class="comp-total-sub">No renewals. No surprises. Ever.</div>
             <a href="https://icecoldsteve.gumroad.com/l/fnfgvd" target="_blank" class="comp-cta">
               <i class="fa-solid fa-cart-shopping"></i>
-              Get SMSAK for $39
+              Get SMSAK now
             </a>
           </div>
         </div>
