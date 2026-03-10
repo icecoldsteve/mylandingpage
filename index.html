@@ -4,150 +4,975 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Social Media Swiss Army Knife • v4.3.0</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <style>
-    body { font-family: 'Inter', system-ui, sans-serif; }
-    .hero-bg { background: linear-gradient(135deg, #18181b 0%, #27272a 100%); }
-    .tool-card { transition: all 0.3s ease; }
-    .tool-card:hover { transform: translateY(-4px); background-color: #27272a; }
-    .discount-box { background: linear-gradient(90deg, #22c55e, #16a34a); }
+    :root {
+      --bg: #0d0d0f;
+      --surface: #141416;
+      --surface2: #1c1c1f;
+      --border: rgba(255,255,255,0.07);
+      --text: #f0f0f2;
+      --muted: #6b6b78;
+      --accent: #7c3aed;
+      --accent2: #a78bfa;
+      --green: #22c55e;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* ── NOISE OVERLAY ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+      opacity: 0.025;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    h1, h2, h3, h4 { font-family: 'Syne', sans-serif; }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 2.5rem;
+      background: rgba(13,13,15,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .nav-logo span { color: var(--accent2); }
+    .nav-links { display: flex; gap: 2rem; font-size: 0.9rem; color: var(--muted); }
+    .nav-links a { color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta {
+      background: var(--accent);
+      color: white;
+      padding: 0.55rem 1.4rem;
+      border-radius: 999px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .nav-cta:hover { opacity: 0.85; }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 8rem 1.5rem 5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* radial glow */
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: -20%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 900px;
+      height: 900px;
+      background: radial-gradient(circle, rgba(124,58,237,0.18) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .hero-inner { position: relative; z-index: 1; max-width: 860px; }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(124,58,237,0.15);
+      border: 1px solid rgba(124,58,237,0.35);
+      color: var(--accent2);
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.45rem 1.1rem;
+      border-radius: 999px;
+      margin-bottom: 2.5rem;
+      animation: fadeUp 0.6s ease both;
+    }
+
+    h1.hero-title {
+      font-size: clamp(3.5rem, 8vw, 6.5rem);
+      font-weight: 800;
+      line-height: 1.02;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.75rem;
+      animation: fadeUp 0.6s 0.1s ease both;
+    }
+    h1.hero-title em {
+      font-style: normal;
+      background: linear-gradient(135deg, #a78bfa, #7c3aed);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-sub {
+      font-size: 1.2rem;
+      color: var(--muted);
+      line-height: 1.7;
+      max-width: 520px;
+      margin: 0 auto 3rem;
+      font-weight: 300;
+      animation: fadeUp 0.6s 0.2s ease both;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      animation: fadeUp 0.6s 0.3s ease both;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: white;
+      color: #0d0d0f;
+      padding: 1rem 2.2rem;
+      border-radius: 1rem;
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 16px 48px rgba(0,0,0,0.5); }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      padding: 1rem 2rem;
+      border-radius: 1rem;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-secondary:hover { border-color: rgba(255,255,255,0.2); color: var(--text); }
+
+    /* platform badges */
+    .platform-badges {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 0.75rem;
+      animation: fadeUp 0.6s 0.4s ease both;
+    }
+    .platform-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 0.45rem 1rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    /* stats strip */
+    .stats-strip {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+      margin-top: 4rem;
+      padding-top: 4rem;
+      border-top: 1px solid var(--border);
+      animation: fadeUp 0.6s 0.5s ease both;
+    }
+    .stat { text-align: center; }
+    .stat-number {
+      font-family: 'Syne', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--text);
+    }
+    .stat-label { font-size: 0.8rem; color: var(--muted); margin-top: 0.2rem; }
+
+    /* ── DISCOUNT BANNER ── */
+    .discount-section { padding: 5rem 1.5rem; }
+    .discount-card {
+      max-width: 780px;
+      margin: 0 auto;
+      background: linear-gradient(135deg, #166534, #15803d);
+      border-radius: 1.75rem;
+      padding: 3rem;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 2rem;
+      align-items: center;
+      box-shadow: 0 32px 80px rgba(34,197,94,0.15);
+    }
+    .discount-left { }
+    .discount-eyebrow {
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 0.75rem;
+    }
+    .discount-code-label {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+    }
+    .discount-code {
+      font-family: 'DM Mono', monospace;
+      font-size: 2rem;
+      font-weight: 500;
+      background: rgba(0,0,0,0.25);
+      display: inline-block;
+      padding: 0.4rem 1.2rem;
+      border-radius: 0.75rem;
+      letter-spacing: 0.06em;
+    }
+    .discount-price {
+      font-family: 'Syne', sans-serif;
+      margin-top: 0.9rem;
+      font-size: 1.1rem;
+    }
+    .price-old { text-decoration: line-through; opacity: 0.5; }
+    .price-new { font-size: 1.8rem; font-weight: 800; margin-left: 0.5rem; }
+
+    .discount-divider {
+      width: 1px;
+      height: 100px;
+      background: rgba(255,255,255,0.15);
+    }
+    .discount-right { }
+    .discount-right ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+    .discount-right li {
+      display: flex; align-items: center; gap: 0.6rem;
+      font-size: 0.95rem; font-weight: 500;
+    }
+    .discount-right li.no { color: rgba(255,255,255,0.5); text-decoration: line-through; }
+
+    .copy-btn {
+      display: block;
+      width: 100%;
+      margin-top: 2rem;
+      background: rgba(0,0,0,0.3);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: white;
+      padding: 0.9rem;
+      border-radius: 0.9rem;
+      font-family: 'Syne', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+      display: flex; align-items: center; justify-content: center; gap: 0.6rem;
+    }
+    .copy-btn:hover { background: rgba(0,0,0,0.5); }
+
+    /* ── MOCKUP PLACEHOLDER ── */
+    .mockup-section {
+      padding: 2rem 1.5rem 5rem;
+    }
+    .mockup-wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 1.5rem;
+      overflow: hidden;
+    }
+    .mockup-titlebar {
+      background: var(--surface2);
+      padding: 0.85rem 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .dot { width: 12px; height: 12px; border-radius: 50%; }
+    .dot-r { background: #ff5f57; }
+    .dot-y { background: #ffbd2e; }
+    .dot-g { background: #28c840; }
+    .mockup-titlebar-label {
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 0.78rem;
+      color: var(--muted);
+      font-family: 'DM Mono', monospace;
+    }
+    .mockup-body {
+      padding: 3rem;
+      min-height: 340px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 1rem;
+      background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 20px,
+        rgba(255,255,255,0.015) 20px,
+        rgba(255,255,255,0.015) 40px
+      );
+    }
+    .mockup-icon {
+      width: 72px; height: 72px;
+      background: rgba(124,58,237,0.15);
+      border: 1px solid rgba(124,58,237,0.3);
+      border-radius: 1rem;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2rem;
+    }
+    .mockup-label { color: var(--muted); font-size: 0.9rem; }
+
+    /* ── FEATURES ── */
+    .features-section { padding: 6rem 1.5rem; }
+    .section-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent2);
+      font-weight: 600;
+      margin-bottom: 1rem;
+      display: block;
+    }
+    .section-title {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 4rem;
+    }
+    .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5px; max-width: 1100px; margin: 0 auto; }
+    .feature-card {
+      background: var(--surface);
+      padding: 2.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .feature-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(124,58,237,0.5), transparent);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .feature-card:hover::before { opacity: 1; }
+    .feature-card:first-child { border-radius: 1.5rem 0 0 0; }
+    .feature-card:nth-child(3) { border-radius: 0 1.5rem 0 0; }
+    .feature-card:nth-child(4) { border-radius: 0 0 0 1.5rem; }
+    .feature-card:last-child { border-radius: 0 0 1.5rem 0; }
+    .feature-icon {
+      width: 52px; height: 52px;
+      background: rgba(124,58,237,0.12);
+      border-radius: 0.85rem;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 1.5rem;
+    }
+    .feature-card h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 0.65rem;
+    }
+    .feature-card p { font-size: 0.9rem; color: var(--muted); line-height: 1.7; }
+
+    /* ── ALL 30 TOOLS ── */
+    .tools-section { padding: 6rem 1.5rem; background: var(--surface); }
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .tool-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      transition: border-color 0.25s, transform 0.25s;
+      cursor: default;
+    }
+    .tool-card:hover {
+      border-color: rgba(124,58,237,0.4);
+      transform: translateY(-2px);
+    }
+    .tool-icon {
+      width: 40px; height: 40px;
+      background: rgba(124,58,237,0.1);
+      border-radius: 0.6rem;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .tool-name { font-family: 'Syne', sans-serif; font-size: 0.88rem; font-weight: 600; }
+    .tool-cat { font-size: 0.72rem; color: var(--muted); margin-top: 0.1rem; }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials-section { padding: 6rem 1.5rem; }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .testimonial {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 1.25rem;
+      padding: 2rem;
+    }
+    .testimonial-stars { color: #fbbf24; font-size: 0.85rem; margin-bottom: 1rem; letter-spacing: 0.05em; }
+    .testimonial-text {
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: #c4c4cc;
+      margin-bottom: 1.5rem;
+    }
+    .testimonial-author { display: flex; align-items: center; gap: 0.8rem; }
+    .avatar {
+      width: 42px; height: 42px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+    .author-info { }
+    .author-name { font-weight: 600; font-size: 0.9rem; }
+    .author-handle { font-size: 0.78rem; color: var(--muted); }
+
+    /* ── FAQ ── */
+    .faq-section { padding: 6rem 1.5rem; background: var(--surface); }
+    .faq-list { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 0; }
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .faq-item:first-child { border-top: 1px solid var(--border); }
+    .faq-q {
+      width: 100%;
+      background: none;
+      border: none;
+      color: var(--text);
+      text-align: left;
+      padding: 1.5rem 0;
+      font-family: 'Syne', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+    .faq-q .chevron {
+      transition: transform 0.3s;
+      color: var(--muted);
+      flex-shrink: 0;
+      font-size: 0.8rem;
+    }
+    .faq-item.open .faq-q .chevron { transform: rotate(180deg); }
+    .faq-a {
+      font-size: 0.93rem;
+      color: var(--muted);
+      line-height: 1.8;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s ease;
+    }
+    .faq-item.open .faq-a { max-height: 300px; padding-bottom: 1.5rem; }
+
+    /* ── FINAL CTA ── */
+    .final-cta { padding: 8rem 1.5rem; text-align: center; position: relative; overflow: hidden; }
+    .final-cta::before {
+      content: '';
+      position: absolute;
+      bottom: -40%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(circle, rgba(124,58,237,0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .final-cta-inner { position: relative; z-index: 1; }
+    .final-cta h2 {
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.25rem;
+    }
+    .final-cta p { color: var(--muted); font-size: 1.1rem; margin-bottom: 3rem; }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.82rem;
+      color: var(--muted);
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 720px) {
+      nav { padding: 1rem 1.25rem; }
+      .nav-links { display: none; }
+      .discount-card { grid-template-columns: 1fr; }
+      .discount-divider { display: none; }
+      .feature-card:first-child, .feature-card:nth-child(3),
+      .feature-card:nth-child(4), .feature-card:last-child { border-radius: 0; }
+      .features-grid { gap: 2px; }
+    }
   </style>
 </head>
-<body class="bg-zinc-950 text-white">
+<body>
 
-  <!-- Hero -->
-  <header class="hero-bg py-24">
-    <div class="max-w-6xl mx-auto px-6 text-center">
-      <div class="flex justify-center mb-8">
-        <div class="bg-violet-600 text-white text-5xl font-bold w-24 h-24 rounded-3xl flex items-center justify-center shadow-2xl shadow-violet-500/30">
-          ⚡
-        </div>
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">⚡ <span>SMSK</span> <span style="color:var(--muted);font-weight:400;font-size:0.8rem;">v4.3.0</span></div>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#tools">All Tools</a>
+      <a href="#testimonials">Reviews</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a href="https://icecoldsteve.gumroad.com/l/fnfgvd" target="_blank" class="nav-cta">Buy Now — $39</a>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="hero-badge">
+        <i class="fa-solid fa-bolt"></i>
+        30 AI-powered tools · One desktop app
       </div>
-      <h1 class="text-7xl font-bold tracking-tighter mb-6">Social Media<br>Swiss Army Knife</h1>
-      
-      <p class="text-3xl text-zinc-400 mb-10 max-w-2xl mx-auto">
-        30 powerful AI tools for content creators<br>
-        — all in one desktop app.
+      <h1 class="hero-title">
+        Social Media<br><em>Swiss Army Knife</em>
+      </h1>
+      <p class="hero-sub">
+        The all-in-one desktop app for content creators who want to move faster, create better, and post smarter.
       </p>
-
-      <!-- Buy Button -->
-      <div class="flex gap-6 justify-center items-center flex-wrap">
-        <a href="https://icecoldsteve.gumroad.com/l/fnfgvd" 
-           target="_blank"
-           class="bg-white text-black px-12 py-5 rounded-2xl font-semibold text-xl flex items-center gap-4 hover:bg-zinc-100 transition-all shadow-xl">
+      <div class="hero-ctas">
+        <a href="https://icecoldsteve.gumroad.com/l/fnfgvd" target="_blank" class="btn-primary">
           <i class="fa-solid fa-cart-shopping"></i>
-          BUY ON GUMROAD
+          Buy on Gumroad
+        </a>
+        <a href="#tools" class="btn-secondary">
+          <i class="fa-solid fa-grid-2"></i>
+          See all 30 tools
         </a>
       </div>
-
-      <!-- NEW DISCOUNT BANNER -->
-      <div class="mt-10 max-w-2xl mx-auto">
-        <div class="discount-box text-black rounded-3xl p-8 shadow-2xl">
-          <div class="flex flex-col md:flex-row items-center justify-center gap-6 text-center md:text-left">
-            <div>
-              <p class="text-sm font-semibold tracking-widest">LAUNCH DISCOUNT – LIMITED TIME</p>
-              <p class="text-4xl font-bold mt-2">Use code <span class="bg-white px-4 py-1 rounded-xl font-mono text-xl">WEB1000</span></p>
-              <p class="text-2xl mt-3">
-                $50 OFF • Regular $89 → <span class="font-bold text-green-900">$39</span>
-              </p>
-            </div>
-            
-            <div class="hidden md:block w-px h-20 bg-black/20"></div>
-            
-            <div class="text-left">
-              <div class="flex items-center gap-2 text-lg font-semibold">
-                <i class="fa-solid fa-check"></i>
-                One-time payment
-              </div>
-              <div class="flex items-center gap-2 text-lg font-semibold">
-                <i class="fa-solid fa-check"></i>
-                Lifetime access + free updates forever
-              </div>
-              <div class="flex items-center gap-2 text-lg font-semibold text-red-800">
-                <i class="fa-solid fa-xmark"></i>
-                NO monthly subscription
-              </div>
-            </div>
-          </div>
-
-          <!-- Copy button -->
-          <button onclick="copyDiscountCode()" 
-                  class="mt-6 bg-black text-white hover:bg-zinc-800 transition px-8 py-3 rounded-2xl font-semibold flex items-center gap-3 mx-auto">
-            <i class="fa-solid fa-copy"></i>
-            <span id="copyText">Copy Discount Code WEB1000</span>
-          </button>
+      <div class="platform-badges">
+        <span class="platform-badge"><i class="fa-brands fa-windows"></i> Windows</span>
+        <span class="platform-badge"><i class="fa-brands fa-apple"></i> macOS</span>
+      </div>
+      <div class="stats-strip">
+        <div class="stat">
+          <div class="stat-number">10,000+</div>
+          <div class="stat-label">Active creators</div>
         </div>
-        
-        <p class="text-xs text-zinc-500 mt-4">
-          One-time purchase • Lifetime license • Free updates for life
-        </p>
+        <div class="stat">
+          <div class="stat-number">30</div>
+          <div class="stat-label">Powerful tools</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">$0/mo</div>
+          <div class="stat-label">No subscription</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">∞</div>
+          <div class="stat-label">Free updates</div>
+        </div>
       </div>
     </div>
   </header>
 
-  <!-- Rest of the page (Features, Tool Grid, Footer) stays exactly the same -->
-  <!-- Features -->
-  <section class="py-20 bg-zinc-900">
-    <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-4xl font-bold text-center mb-16">Everything a creator needs in one app</h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-zinc-800 rounded-3xl p-10 text-center">
-          <div class="text-5xl mb-6">🎬</div>
-          <h3 class="text-2xl font-semibold mb-3">Video Power Tools</h3>
-          <p class="text-zinc-400">Lossless Cut, Viral Cutter, Karaoke Subtitles, Music Adder, Batch Compiler & more.</p>
-        </div>
-        <div class="bg-zinc-800 rounded-3xl p-10 text-center">
-          <div class="text-5xl mb-6">🤖</div>
-          <h3 class="text-2xl font-semibold mb-3">Full AI Suite</h3>
-          <p class="text-zinc-400">Content Ideas Generator, Script Writer, Brand Voice Trainer, Reply Generator, Caption Adapter, Sentiment Analyzer.</p>
-        </div>
-        <div class="bg-zinc-800 rounded-3xl p-10 text-center">
-          <div class="text-5xl mb-6">📡</div>
-          <h3 class="text-2xl font-semibold mb-3">Direct Publisher</h3>
-          <p class="text-zinc-400">Post directly to TikTok, YouTube, Instagram, LinkedIn & X from one screen.</p>
-        </div>
+  <!-- DISCOUNT BANNER -->
+  <section class="discount-section">
+    <div class="discount-card">
+      <div class="discount-left">
+        <p class="discount-eyebrow">🔥 Launch Discount — Limited Time</p>
+        <p class="discount-code-label">Use code at checkout:</p>
+        <span class="discount-code">WEB1000</span>
+        <p class="discount-price">
+          <span class="price-old">$89</span>
+          <span class="price-new">$39</span>
+          — Save $50
+        </p>
+      </div>
+      <div class="discount-divider"></div>
+      <div class="discount-right">
+        <ul>
+          <li><i class="fa-solid fa-check"></i> One-time payment</li>
+          <li><i class="fa-solid fa-check"></i> Lifetime access</li>
+          <li><i class="fa-solid fa-check"></i> Free updates forever</li>
+          <li class="no"><i class="fa-solid fa-xmark"></i> No monthly fees</li>
+        </ul>
+        <button onclick="copyCode()" class="copy-btn">
+          <i class="fa-solid fa-copy"></i>
+          <span id="copyText">Copy Code: WEB1000</span>
+        </button>
       </div>
     </div>
   </section>
 
-  <!-- Tool Grid -->
-  <section class="py-20">
-    <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-4xl font-bold text-center mb-12">All 30 Tools</h2>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
-        <div class="tool-card bg-zinc-900 p-6 rounded-2xl">Lossless Cut</div>
-        <div class="tool-card bg-zinc-900 p-6 rounded-2xl">Viral Cutter</div>
-        <div class="tool-card bg-zinc-900 p-6 rounded-2xl">Content Ideas Generator</div>
-        <div class="tool-card bg-zinc-900 p-6 rounded-2xl">Direct Publisher</div>
-        <div class="tool-card bg-zinc-900 p-6 rounded-2xl">Hashtag Research</div>
-        <div class="tool-card bg-zinc-900 p-6 rounded-2xl">Optimal Post Time</div>
-        <div class="tool-card bg-zinc-900 p-6 rounded-2xl">AI Script Writer</div>
-        <div class="tool-card bg-zinc-900 p-6 rounded-2xl">Brand Voice Trainer</div>
-        <div class="tool-card bg-zinc-900 p-6 rounded-2xl">Engagement Reply Generator</div>
-        <div class="tool-card bg-zinc-900 p-6 rounded-2xl">Caption Adapter</div>
-        <div class="tool-card bg-zinc-900 p-6 rounded-2xl">Sentiment Analyzer</div>
-        <div class="tool-card bg-zinc-900 p-6 rounded-2xl">30-Day Content Calendar</div>
+  <!-- APP MOCKUP -->
+  <section class="mockup-section">
+    <div class="mockup-wrap reveal">
+      <div class="mockup-titlebar">
+        <span class="dot dot-r"></span>
+        <span class="dot dot-y"></span>
+        <span class="dot dot-g"></span>
+        <span class="mockup-titlebar-label">Social Media Swiss Army Knife — v4.3.0</span>
+      </div>
+      <div class="mockup-body">
+        <div class="mockup-icon">⚡</div>
+        <p class="mockup-label">App screenshot coming soon</p>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-black py-12 text-center text-zinc-500 text-sm">
-    <p>© 2026 IcecoldAI • Social Media Swiss Army Knife v4.3.0</p>
-    <p class="mt-2">Built for creators who want to move faster.</p>
+  <!-- FEATURES -->
+  <section class="features-section" id="features">
+    <div style="max-width:1100px;margin:0 auto;text-align:center;">
+      <span class="section-label">Why creators choose SMSK</span>
+      <h2 class="section-title">Everything you need.<br>Nothing you don't.</h2>
+    </div>
+    <div class="features-grid reveal">
+      <div class="feature-card">
+        <div class="feature-icon">🎬</div>
+        <h3>Video Power Tools</h3>
+        <p>Lossless Cut, Viral Cutter, Karaoke Subtitles, Music Adder, Speed Ramper, Batch Compiler and more — all without subscriptions.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🤖</div>
+        <h3>Full AI Suite</h3>
+        <p>Script Writer, Brand Voice Trainer, Engagement Reply Generator, Caption Adapter, Hook Generator — powered by cutting-edge AI.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📡</div>
+        <h3>Direct Publisher</h3>
+        <p>Post directly to TikTok, YouTube, Instagram, LinkedIn & X — all from one screen. No tab-switching, no headaches.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📅</div>
+        <h3>Content Calendar</h3>
+        <p>Auto-generate a 30-day content calendar tailored to your niche and audience. Never wonder "what do I post today?" again.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📊</div>
+        <h3>Analytics & Timing</h3>
+        <p>Optimal Post Time, Sentiment Analyzer, Hashtag Research — data-driven decisions built right into your workflow.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🖥️</div>
+        <h3>True Desktop App</h3>
+        <p>Native Windows & macOS app. No browser, no login walls, no internet required for most tools. Fast and private by default.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ALL 30 TOOLS -->
+  <section class="tools-section" id="tools">
+    <div style="max-width:1100px;margin:0 auto;text-align:center;margin-bottom:3rem;">
+      <span class="section-label">Complete toolkit</span>
+      <h2 class="section-title" style="margin-bottom:0;">All 30 tools — included.</h2>
+    </div>
+    <div class="tools-grid reveal">
+      <div class="tool-card"><div class="tool-icon">✂️</div><div><div class="tool-name">Lossless Cut</div><div class="tool-cat">Video</div></div></div>
+      <div class="tool-card"><div class="tool-icon">🔥</div><div><div class="tool-name">Viral Cutter</div><div class="tool-cat">Video</div></div></div>
+      <div class="tool-card"><div class="tool-icon">🎵</div><div><div class="tool-name">Music Adder</div><div class="tool-cat">Video</div></div></div>
+      <div class="tool-card"><div class="tool-icon">🎤</div><div><div class="tool-name">Karaoke Subtitles</div><div class="tool-cat">Video</div></div></div>
+      <div class="tool-card"><div class="tool-icon">⚡</div><div><div class="tool-name">Speed Ramper</div><div class="tool-cat">Video</div></div></div>
+      <div class="tool-card"><div class="tool-icon">📦</div><div><div class="tool-name">Batch Compiler</div><div class="tool-cat">Video</div></div></div>
+      <div class="tool-card"><div class="tool-icon">📱</div><div><div class="tool-name">Reel Formatter</div><div class="tool-cat">Video</div></div></div>
+      <div class="tool-card"><div class="tool-icon">🎨</div><div><div class="tool-name">Color Grader</div><div class="tool-cat">Video</div></div></div>
+      <div class="tool-card"><div class="tool-icon">🖼️</div><div><div class="tool-name">Thumbnail Maker</div><div class="tool-cat">Design</div></div></div>
+      <div class="tool-card"><div class="tool-icon">🚫</div><div><div class="tool-name">Watermark Remover</div><div class="tool-cat">Design</div></div></div>
+      <div class="tool-card"><div class="tool-icon">🪄</div><div><div class="tool-name">Background Remover</div><div class="tool-cat">Design</div></div></div>
+      <div class="tool-card"><div class="tool-icon">📖</div><div><div class="tool-name">Story Maker</div><div class="tool-cat">Design</div></div></div>
+      <div class="tool-card"><div class="tool-icon">💡</div><div><div class="tool-name">Content Ideas Generator</div><div class="tool-cat">AI</div></div></div>
+      <div class="tool-card"><div class="tool-icon">✍️</div><div><div class="tool-name">AI Script Writer</div><div class="tool-cat">AI</div></div></div>
+      <div class="tool-card"><div class="tool-icon">🎣</div><div><div class="tool-name">Hook Generator</div><div class="tool-cat">AI</div></div></div>
+      <div class="tool-card"><div class="tool-icon">🗣️</div><div><div class="tool-name">Brand Voice Trainer</div><div class="tool-cat">AI</div></div></div>
+      <div class="tool-card"><div class="tool-icon">💬</div><div><div class="tool-name">Reply Generator</div><div class="tool-cat">AI</div></div></div>
+      <div class="tool-card"><div class="tool-icon">🔄</div><div><div class="tool-name">Caption Adapter</div><div class="tool-cat">AI</div></div></div>
+      <div class="tool-card"><div class="tool-icon">🧠</div><div><div class="tool-name">Sentiment Analyzer</div><div class="tool-cat">AI</div></div></div>
+      <div class="tool-card"><div class="tool-icon">📝</div><div><div class="tool-name">DM Template Builder</div><div class="tool-cat">AI</div></div></div>
+      <div class="tool-card"><div class="tool-icon">📅</div><div><div class="tool-name">30-Day Content Calendar</div><div class="tool-cat">Planning</div></div></div>
+      <div class="tool-card"><div class="tool-icon">⏰</div><div><div class="tool-name">Optimal Post Time</div><div class="tool-cat">Planning</div></div></div>
+      <div class="tool-card"><div class="tool-icon">#️⃣</div><div><div class="tool-name">Hashtag Research</div><div class="tool-cat">Planning</div></div></div>
+      <div class="tool-card"><div class="tool-icon">🔍</div><div><div class="tool-name">Competitor Analyzer</div><div class="tool-cat">Planning</div></div></div>
+      <div class="tool-card"><div class="tool-icon">📈</div><div><div class="tool-name">Trend Tracker</div><div class="tool-cat">Planning</div></div></div>
+      <div class="tool-card"><div class="tool-icon">🧪</div><div><div class="tool-name">A/B Caption Tester</div><div class="tool-cat">Planning</div></div></div>
+      <div class="tool-card"><div class="tool-icon">👤</div><div><div class="tool-name">Bio Optimizer</div><div class="tool-cat">Profile</div></div></div>
+      <div class="tool-card"><div class="tool-icon">📡</div><div><div class="tool-name">Direct Publisher</div><div class="tool-cat">Publishing</div></div></div>
+      <div class="tool-card"><div class="tool-icon">🗓️</div><div><div class="tool-name">Cross-Post Scheduler</div><div class="tool-cat">Publishing</div></div></div>
+      <div class="tool-card"><div class="tool-icon">🎙️</div><div><div class="tool-name">Auto-Transcriber</div><div class="tool-cat">Utility</div></div></div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials-section" id="testimonials">
+    <div style="max-width:1100px;margin:0 auto;text-align:center;margin-bottom:3.5rem;">
+      <span class="section-label">Real creators, real results</span>
+      <h2 class="section-title" style="margin-bottom:0;">Loved by 10,000+ creators</h2>
+    </div>
+    <div class="testimonials-grid reveal">
+
+      <div class="testimonial">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"I replaced 6 different subscriptions with this one app. The Viral Cutter alone saved me hours every week — it just knows what clips will perform."</p>
+        <div class="testimonial-author">
+          <div class="avatar" style="background:#7c3aed20;color:#a78bfa;">JL</div>
+          <div class="author-info">
+            <div class="author-name">Jake L.</div>
+            <div class="author-handle">@jakelcreates · 280K on TikTok</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"The Brand Voice Trainer is insane. Fed it my old posts and it completely nails my tone now. Every caption it writes sounds exactly like me."</p>
+        <div class="testimonial-author">
+          <div class="avatar" style="background:#22c55e20;color:#4ade80;">SM</div>
+          <div class="author-info">
+            <div class="author-name">Sofia M.</div>
+            <div class="author-handle">@sofiamakes · 95K on Instagram</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Posting to 5 platforms used to take me 45 minutes. Now it's 5 minutes. The Direct Publisher + Cross-Post Scheduler combo is genuinely life-changing."</p>
+        <div class="testimonial-author">
+          <div class="avatar" style="background:#f59e0b20;color:#fbbf24;">DK</div>
+          <div class="author-info">
+            <div class="author-name">Dan K.</div>
+            <div class="author-handle">@dankproduces · 410K on YouTube</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"One-time payment for something this powerful felt almost too good to be true. I kept waiting for a catch. There isn't one."</p>
+        <div class="testimonial-author">
+          <div class="avatar" style="background:#ec489920;color:#f472b6;">AT</div>
+          <div class="author-info">
+            <div class="author-name">Amy T.</div>
+            <div class="author-handle">@amytcontent · 52K on LinkedIn</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"The 30-Day Content Calendar filled my whole next month in 2 minutes. I spent more time reading the output than it took to generate. Ridiculous value."</p>
+        <div class="testimonial-author">
+          <div class="avatar" style="background:#0ea5e920;color:#38bdf8;">MR</div>
+          <div class="author-info">
+            <div class="author-name">Marcus R.</div>
+            <div class="author-handle">@marcusr · 170K on X</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Background Remover, Thumbnail Maker, Karaoke Subs — professional results without professional tools. My edit quality went up and my stress went way down."</p>
+        <div class="testimonial-author">
+          <div class="avatar" style="background:#84cc1620;color:#a3e635;">LP</div>
+          <div class="author-info">
+            <div class="author-name">Lena P.</div>
+            <div class="author-handle">@lenapcreative · 38K on Instagram</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section" id="faq">
+    <div style="max-width:720px;margin:0 auto;text-align:center;margin-bottom:3.5rem;">
+      <span class="section-label">FAQ</span>
+      <h2 class="section-title" style="margin-bottom:0;">Common questions</h2>
+    </div>
+    <div class="faq-list reveal">
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Is this really a one-time payment?
+          <i class="fa-solid fa-chevron-down chevron"></i>
+        </button>
+        <div class="faq-a">Yes, 100%. You pay once and own it forever. No subscriptions, no renewal fees, no "free tier" restrictions. You get full access to all 30 tools immediately after purchase.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          What operating systems are supported?
+          <i class="fa-solid fa-chevron-down chevron"></i>
+        </button>
+        <div class="faq-a">SMSK is a native desktop app available for both Windows and macOS. Windows 10/11 and macOS 12+ (Monterey and above) are supported. A web version is not currently planned.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Do the AI tools require an API key?
+          <i class="fa-solid fa-chevron-down chevron"></i>
+        </button>
+        <div class="faq-a">No API key needed. All AI features are included and pre-configured — just open the app and start using them right away. There are no additional costs for AI features.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          How does the Direct Publisher work?
+          <i class="fa-solid fa-chevron-down chevron"></i>
+        </button>
+        <div class="faq-a">You connect your social accounts once using secure OAuth — we never store your passwords. After that, you can post and schedule to TikTok, YouTube, Instagram, LinkedIn, and X directly from the app without opening a browser.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          What does "free updates forever" mean?
+          <i class="fa-solid fa-chevron-down chevron"></i>
+        </button>
+        <div class="faq-a">Every future version of SMSK — including new tools, UI improvements, bug fixes, and platform updates — is free for all customers. No paid upgrade tier, ever. Buy once, benefit forever.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Is there a refund policy?
+          <i class="fa-solid fa-chevron-down chevron"></i>
+        </button>
+        <div class="faq-a">Yes. We offer a 30-day money-back guarantee through Gumroad. If SMSK isn't the right fit, just reach out and you'll get a full refund — no questions asked.</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+    <div class="final-cta-inner reveal">
+      <h2>Stop paying monthly.<br>Start creating more.</h2>
+      <p>Join 10,000+ creators who replaced their whole stack with one app.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="https://icecoldsteve.gumroad.com/l/fnfgvd" target="_blank" class="btn-primary">
+          <i class="fa-solid fa-cart-shopping"></i>
+          Get SMSK — $39 with code WEB1000
+        </a>
+      </div>
+      <div class="platform-badges" style="margin-top:1.5rem;">
+        <span class="platform-badge"><i class="fa-brands fa-windows"></i> Windows</span>
+        <span class="platform-badge"><i class="fa-brands fa-apple"></i> macOS</span>
+      </div>
+      <p style="font-size:0.78rem;color:var(--muted);margin-top:1.5rem;">One-time purchase • 30-day money-back guarantee • Free updates forever</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span>© 2026 IcecoldAI</span>
+    <span>Social Media Swiss Army Knife v4.3.0</span>
+    <span>Built for creators who move fast.</span>
   </footer>
 
   <script>
-    function copyDiscountCode() {
+    // Copy discount code
+    function copyCode() {
       navigator.clipboard.writeText("WEB1000");
-      const btnText = document.getElementById("copyText");
-      const originalText = btnText.innerHTML;
-      btnText.innerHTML = "✅ Copied!";
-      setTimeout(() => {
-        btnText.innerHTML = originalText;
-      }, 2000);
+      const el = document.getElementById("copyText");
+      el.textContent = "✅ Copied!";
+      setTimeout(() => { el.textContent = "Copy Code: WEB1000"; }, 2000);
     }
+
+    // FAQ accordion
+    function toggleFaq(btn) {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    }
+
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   </script>
 
 </body>
