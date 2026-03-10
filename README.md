@@ -46,3 +46,13 @@ The app has **35 tools**. Here's exactly what each one needs:
 ---
 
 **Tip**: You can use the app **without any key** for many powerful tools (especially video editing ones).
+
+### 📊 Visual Overview
+
+| Requirement              | Count | Tools |
+|--------------------------|-------|-------|
+| 🟢 **OpenAI API Key**    | 21    | ShortGPT, Virality Predictor, Thumbnail Generator, Script Writer, Bio Writer, Competitor Analyzer, ... |
+| 🔵 **Grok xAI Key**      | 1     | Grok Imagine |
+| ⚪ **No Key Needed**     | 13    | Lossless Cut, Viral Cutter, Video Upscaler, Bulk Processor, Music Adder, Direct Publisher, ... |
+
+**Most video editing tools work completely offline** — only AI features need keys.
