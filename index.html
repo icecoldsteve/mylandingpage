@@ -101,7 +101,7 @@
         "name": "Is there a refund policy?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Sorry - NO refunds. As a small indie dev with no team, we can't handle processing or email support. Thanks for understanding."
+          "text": "Due to the digital nature of this product, all sales are final. That said, if you run into a technical issue, reach out and I'll do my best to help you get it working."
         }
       }
     ]
@@ -698,6 +698,107 @@
     .tool-cat { font-size: 0.72rem; color: var(--muted); margin-top: 0.1rem; }
 
     /* ── COMPARISON TABLE ── */
+    /* ── API BREAKDOWN ── */
+    .api-breakdown {
+      padding: 5rem 1.5rem;
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .api-breakdown-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .api-breakdown-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .api-cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+    @media (max-width: 700px) {
+      .api-cols { grid-template-columns: 1fr; }
+    }
+    .api-col {
+      border-radius: 16px;
+      padding: 2rem;
+      border: 1px solid var(--border);
+    }
+    .api-col-free {
+      background: linear-gradient(135deg, rgba(124,58,237,0.08) 0%, rgba(124,58,237,0.02) 100%);
+      border-color: rgba(124,58,237,0.3);
+    }
+    .api-col-ai {
+      background: var(--surface2);
+    }
+    .api-col-title {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 0.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .api-col-title .badge {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 0.2rem 0.55rem;
+      border-radius: 99px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .badge-free {
+      background: rgba(124,58,237,0.2);
+      color: var(--accent2);
+      border: 1px solid rgba(124,58,237,0.35);
+    }
+    .badge-api {
+      background: rgba(107,107,120,0.15);
+      color: var(--muted);
+      border: 1px solid var(--border);
+    }
+    .api-col-sub {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+    }
+    .api-tool-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+    }
+    .api-tool-list li {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-size: 0.9rem;
+    }
+    .api-tool-list li .ticon {
+      font-size: 1rem;
+      width: 1.5rem;
+      text-align: center;
+      flex-shrink: 0;
+    }
+    .api-tool-list li .tcat {
+      font-size: 0.72rem;
+      color: var(--muted);
+      margin-left: auto;
+      white-space: nowrap;
+    }
+    .api-note {
+      text-align: center;
+      margin-top: 2.5rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    .api-note a { color: var(--accent2); text-decoration: underline; text-underline-offset: 3px; }
+
     .comparison-section { padding: 6rem 1.5rem; background: var(--bg); }
     .comparison-inner { max-width: 1100px; margin: 0 auto; }
 
@@ -1444,7 +1545,7 @@
       <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" aria-label="Toggle light/dark mode" title="Toggle light/dark mode">
         <i class="fa-solid fa-moon" id="themeIcon"></i>
       </button>
-      <a href="https://icecoldai.gumroad.com/l/fnfgvd" target="_blank" class="nav-cta">BUY NOW</a>
+      <a href="#" target="_blank" class="nav-cta">BUY NOW</a>
       <button class="hamburger" id="hamburger" onclick="toggleNav()" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
@@ -1465,7 +1566,7 @@
         The all-in-one <strong style="color:var(--text);font-weight:500;">AI desktop app</strong> for content creators who want to move faster, create better and post smarter.
       </p>
       <div class="hero-ctas">
-        <a href="https://icecoldai.gumroad.com/l/fnfgvd" target="_blank" class="btn-primary">
+        <a href="#" target="_blank" class="btn-primary">
           <i class="fa-solid fa-cart-shopping"></i>
           Buy on Gumroad
         </a>
@@ -1679,6 +1780,73 @@
     </div>
   </section>
 
+  <!-- API BREAKDOWN -->
+  <section class="api-breakdown" id="whats-included">
+    <div class="api-breakdown-inner">
+      <div class="api-breakdown-header reveal">
+        <span class="section-label">No gatekeeping</span>
+        <h2 class="section-title" style="margin-bottom:0.75rem;">13 tools work out of the box.<br>No API key. No extra cost.</h2>
+        <p style="color:var(--muted);font-size:1rem;max-width:540px;margin:0 auto;">The moment you install SMSAK, 13 powerful tools are ready to use — before you enter a single API key. The remaining 22 AI tools unlock when you add your own OpenAI key.</p>
+      </div>
+      <div class="api-cols reveal">
+
+        <!-- FREE COLUMN -->
+        <div class="api-col api-col-free">
+          <div class="api-col-title">
+            ✅ Works instantly
+            <span class="badge badge-free">No API key needed</span>
+          </div>
+          <p class="api-col-sub">13 tools — powered locally by FFmpeg. Zero ongoing cost.</p>
+          <ul class="api-tool-list">
+            <li><span class="ticon">✂️</span> Lossless Cut <span class="tcat">Video</span></li>
+            <li><span class="ticon">🔥</span> Viral Cutter <span class="tcat">Video</span></li>
+            <li><span class="ticon">🎵</span> Music Adder <span class="tcat">Video</span></li>
+            <li><span class="ticon">🎤</span> Karaoke Subtitles <span class="tcat">Video</span></li>
+            <li><span class="ticon">⚡</span> Speed Ramper <span class="tcat">Video</span></li>
+            <li><span class="ticon">📦</span> Batch Compiler <span class="tcat">Video</span></li>
+            <li><span class="ticon">📱</span> Reel Formatter <span class="tcat">Video</span></li>
+            <li><span class="ticon">🎨</span> Color Grader <span class="tcat">Video</span></li>
+            <li><span class="ticon">🖼️</span> Thumbnail Maker <span class="tcat">Design</span></li>
+            <li><span class="ticon">🚫</span> Watermark Remover <span class="tcat">Design</span></li>
+            <li><span class="ticon">🪄</span> Background Remover <span class="tcat">Design</span></li>
+            <li><span class="ticon">📖</span> Story Maker <span class="tcat">Design</span></li>
+            <li><span class="ticon">📤</span> Direct Publisher <span class="tcat">Utility</span></li>
+          </ul>
+        </div>
+
+        <!-- AI COLUMN -->
+        <div class="api-col api-col-ai">
+          <div class="api-col-title">
+            🔑 Unlocks with OpenAI key
+            <span class="badge badge-api">Optional</span>
+          </div>
+          <p class="api-col-sub">22 AI tools — bring your own key, pay OpenAI directly (~$2–5/mo typical usage).</p>
+          <ul class="api-tool-list">
+            <li><span class="ticon">✍️</span> AI Script Writer <span class="tcat">AI</span></li>
+            <li><span class="ticon">💡</span> Content Ideas Generator <span class="tcat">AI</span></li>
+            <li><span class="ticon">🎣</span> Hook Generator <span class="tcat">AI</span></li>
+            <li><span class="ticon">🗣️</span> Brand Voice Trainer <span class="tcat">AI</span></li>
+            <li><span class="ticon">💬</span> Reply Generator <span class="tcat">AI</span></li>
+            <li><span class="ticon">🔄</span> Caption Adapter <span class="tcat">AI</span></li>
+            <li><span class="ticon">🧠</span> Sentiment Analyzer <span class="tcat">AI</span></li>
+            <li><span class="ticon">📝</span> DM Template Builder <span class="tcat">AI</span></li>
+            <li><span class="ticon">📅</span> 30-Day Content Calendar <span class="tcat">Planning</span></li>
+            <li><span class="ticon">⏰</span> Optimal Post Time <span class="tcat">Planning</span></li>
+            <li><span class="ticon">#️⃣</span> Hashtag Research <span class="tcat">Planning</span></li>
+            <li><span class="ticon">🔍</span> Competitor Analyzer <span class="tcat">Planning</span></li>
+            <li><span class="ticon">📈</span> Trend Tracker <span class="tcat">Planning</span></li>
+            <li><span class="ticon">🧪</span> A/B Caption Tester <span class="tcat">Planning</span></li>
+            <li><span class="ticon">👤</span> Bio Optimizer <span class="tcat">Profile</span></li>
+            <li><span class="ticon">🎙️</span> Auto-Transcriber <span class="tcat">Utility</span></li>
+            <li style="color:var(--muted);font-style:italic;font-size:0.82rem;padding-top:0.25rem;"><span class="ticon">+</span> 6 more tools</li>
+          </ul>
+        </div>
+
+      </div>
+      <p class="api-note reveal">OpenAI API keys are free to create — <a href="https://platform.openai.com" target="_blank" rel="noopener">get yours at platform.openai.com</a>. You only pay for what you use.</p>
+    </div>
+  </section>
+
   <!-- COMPARISON TABLE -->
   <section class="comparison-section">
     <div class="comparison-inner">
@@ -1813,7 +1981,7 @@
           <div class="comp-total ours-total">
             <div class="comp-total-label">One-time price!</div>
             <div class="comp-total-sub">No renewals. No surprises. Ever.</div>
-            <a href="https://icecoldai.gumroad.com/l/fnfgvd" target="_blank" class="comp-cta">
+            <a href="#" target="_blank" class="comp-cta">
               <i class="fa-solid fa-cart-shopping"></i>
               Get SMSAK now
             </a>
@@ -2111,7 +2279,7 @@
           Is there a refund policy?
           <i class="fa-solid fa-chevron-down chevron"></i>
         </button>
-        <div class="faq-a">Sorry - NO refunds. As a small indie dev with no team, we can't handle processing or email support. Thanks for understanding.</div>
+        <div class="faq-a">Due to the digital nature of this product, all sales are final. That said, if you run into a technical issue, reach out and I'll do my best to help you get it working.</div>
       </div>
 
     </div>
@@ -2137,7 +2305,7 @@
         </div>
       </div>
       <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-        <a href="https://icecoldai.gumroad.com/l/fnfgvd" target="_blank" class="btn-primary">
+        <a href="#" target="_blank" class="btn-primary">
           <i class="fa-solid fa-cart-shopping"></i>
           Get SMSAK — $39 with code WEB50
         </a>
